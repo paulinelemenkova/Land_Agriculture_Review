@@ -85,10 +85,10 @@
 
 %=================================================================
 % Full title of the paper (Capitalized)
-\Title{Distributed Deep Learning and Intelligent Soil--Water Analytics in Precision Agriculture}
+\Title{Distributed Deep Learning and Intelligent Soil--Water Analytics in Precision Agriculture: A Comprehensive Review}
 
 % MDPI internal command: Title for citation in the left column
-\TitleCitation{Distributed Deep Learning and Intelligent Soil--Water Analytics in Precision Agriculture}
+\TitleCitation{Distributed Deep Learning and Intelligent Soil--Water Analytics in Precision Agriculture: A Comprehensive Review}
 
 % Author Orchid ID: enter ID or remove command
 \newcommand{\orcidauthorA}{0000-0002-5759-1089} % Polina Add \orcidA{} behind the author's name
@@ -139,7 +139,17 @@ $^{4}$ \quad La Technopole d'Orl\'eans. 1 avenue du Champ de Mars, 45100 Orl\'ea
 
 Water scarcity has emerged as one of the most pressing and multidimensional challenges confronting global agricultural systems in the twenty-first century. Agriculture accounts for approximately 70\% of total global freshwater withdrawals, making it by far the largest consumer of freshwater resources worldwide \citep{fao2020state}. Concurrently, a confluence of accelerating forces---rapid population growth, urbanisation, changing dietary preferences, and the intensifying effects of anthropogenic climate change---is placing unprecedented pressure on the hydrological systems that sustain food production. Projections by the Intergovernmental Panel on Climate Change (IPCC) indicate that altered precipitation regimes, increased frequency of extreme drought events, and accelerated glacial retreat will substantially reduce water availability across key agricultural regions in Asia, Sub-Saharan Africa, the Mediterranean basin, and parts of the Americas by mid-century \citep{ipcc2022ar6}. In this context, the development of intelligent, data-driven frameworks for efficient soil--water management is no longer merely desirable---it is a scientific and societal imperative.
 
-The challenge of sustainable water management in agriculture is compounded by the heterogeneity of soil systems, the spatial and temporal variability of precipitation, and the complex feedback between land use, vegetation, and the hydrological cycle. Traditional irrigation practices, which frequently rely on fixed schedules and empirical rules, are ill-suited to the dynamic and location-specific character of soil--water interactions. Globally, it is estimated that between 40\% and 60\% of water applied through irrigation is lost to inefficient distribution, evaporation, deep percolation, and surface runoff \citep{gleick2014water}. Such inefficiencies not only deplete scarce freshwater reserves but also accelerate soil salinisation, waterlogging, and nutrient leaching---degradation processes that undermine long-term agricultural productivity.
+The challenge of sustainable water management in agriculture is compounded by the heterogeneity of soil systems, the spatial and temporal variability of precipitation, and the complex feedback between land use, vegetation, and the hydrological cycle, Figure \ref{fig01}.
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_01.png}
+    \end{center}
+    \caption{Global overview of water scarcity and agricultural water demand under climate change scenarios. Diagram source: author.}
+    \label{fig01}
+\end{figure}
+
+Traditional irrigation practices, which frequently rely on fixed schedules and empirical rules, are ill-suited to the dynamic and location-specific character of soil--water interactions. Globally, it is estimated that between 40\% and 60\% of water applied through irrigation is lost to inefficient distribution, evaporation, deep percolation, and surface runoff \citep{gleick2014water}. Such inefficiencies not only deplete scarce freshwater reserves but also accelerate soil salinisation, waterlogging, and nutrient leaching---degradation processes that undermine long-term agricultural productivity.
 
 \subsection{Importance of Soil--Water Interactions}
 
@@ -452,7 +462,15 @@ Organic matter, texture, aggregation, compaction &
 \normalsize
 %============= TABLE ==================================<
 
-Soil texture---the relative proportions of sand, silt, and clay fractions---exerts a primary control on hydraulic behaviour. Sandy soils are characterised by large inter-particle pores, rapid drainage, low water-holding capacity, and high saturated hydraulic conductivity ($K_s$). Clay-rich soils, by contrast, possess predominantly micropores and mesopores that confer high water retention and low $K_s$, but are also prone to shrinkage-induced cracking upon desiccation and to surface sealing under rainfall impact. Loamy soils, occupying an intermediate textural position, generally offer the most favourable combination of water retention and aeration for crop production. The United States Department of Agriculture (USDA) and the Food and Agriculture Organization (FAO) textural classification schemes provide internationally standardised frameworks for communicating soil texture, and texture-based pedotransfer functions (PTFs) are routinely used to estimate hydraulic parameters from routinely measured soil properties \citep{wosten2001pedotransfer, Lemenkova202302, Lemenkova202314}.
+Soil texture---the relative proportions of sand, silt, and clay fractions---exerts a primary control on hydraulic behaviour, Figure \ref{fig02}. Sandy soils are characterised by large inter-particle pores, rapid drainage, low water-holding capacity, and high saturated hydraulic conductivity ($K_s$). Clay-rich soils, by contrast, possess predominantly micropores and mesopores that confer high water retention and low $K_s$, but are also prone to shrinkage-induced cracking upon desiccation and to surface sealing under rainfall impact. Loamy soils, occupying an intermediate textural position, generally offer the most favourable combination of water retention and aeration for crop production. The United States Department of Agriculture (USDA) and the Food and Agriculture Organization (FAO) textural classification schemes provide internationally standardised frameworks for communicating soil texture, and texture-based pedotransfer functions (PTFs) are routinely used to estimate hydraulic parameters from routinely measured soil properties \citep{wosten2001pedotransfer, Lemenkova202302, Lemenkova202314}.
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_02.png}
+    \end{center}
+    \caption{Conceptual diagram scheme of soil--water interaction processes in agricultural systems. Diagram source: author.}
+    \label{fig02}
+\end{figure}
 
 Several hydraulic properties are of particular practical importance for irrigation management. The field capacity ($\theta_{FC}$) is the volumetric water content retained by a well-drained soil approximately 24--48 hours after saturation, typically corresponding to a matric potential of $-33$~kPa for most medium-textured soils. The permanent wilting point ($\theta_{WP}$) is the water content at which the matric potential falls to approximately $-1500$~kPa, beyond which most crops can no longer extract water from the soil against the combined resistance of soil and root hydraulic pathways. The plant-available water capacity (PAWC), defined as $\theta_{FC} - \theta_{WP}$, quantifies the reservoir of soil water accessible for crop growth between irrigation events and is a critical parameter in irrigation scheduling models.
 
@@ -496,9 +514,24 @@ Water stress exerts a profound influence on crop physiology, suppressing leaf ex
 
 Physically-based hydrological and soil--water models have underpinned agricultural water management research for several decades. Widely used frameworks include the Soil and Water Assessment Tool (SWAT) for watershed-scale water balance and non-point source pollution modelling \citep{arnold1998swat}; HYDRUS-1D/2D/3D for variably saturated flow and solute transport in the vadose zone \citep{simunek2008hydrus}; MODFLOW for regional groundwater flow simulation; and DSSAT and AquaCrop for coupled crop--water productivity modelling. These tools have contributed enormously to the understanding of soil--water processes and to the design of irrigation systems and water conservation strategies.
 
-Nevertheless, physically-based models are subject to several important limitations that motivate the complementary use of AI approaches. First, they require extensive parameterisation: SWAT, for example, may involve hundreds of spatially distributed parameters describing soil properties, land use, and channel hydraulics, many of which cannot be directly measured and must be inferred through computationally intensive calibration procedures. Second, the spatial resolution of these models is constrained by the availability of input data and computational resources; representing sub-field heterogeneity in regional or global applications is generally infeasible. Third, the model structural assumptions (e.g., the Richards equation, the Green--Ampt infiltration model) may not hold under all conditions encountered in practice, particularly in degraded soils with complex pore geometries or in the presence of non-equilibrium flow phenomena. Fourth, the computational cost of running physically-based models at scales relevant to real-time operational management is prohibitive without significant simplification.
+Nevertheless, physically-based models are subject to several important limitations that motivate the complementary use of AI approaches, Figure \ref{fig03}. 
 
-Empirical and statistical modelling approaches---including multiple linear regression, generalised additive models, and geostatistical methods such as kriging---offer lower computational cost and require fewer parameters, but their predictive accuracy is limited in strongly nonlinear systems and their extrapolation behaviour outside the range of calibration data is unreliable. These limitations have collectively catalysed the rapid growth of machine learning and deep learning as complementary or alternative tools for soil--water modelling.
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_03.png}
+    \end{center}
+    \caption{Comparison between physics-based and AI-based soil-water modelling frameworks. Diagram source: author.}
+    \label{fig03}
+\end{figure}
+
+Empirical and statistical modelling approaches---including multiple linear regression, generalised additive models, and geostatistical methods such as kriging---offer lower computational cost and require fewer parameters, but their predictive accuracy is limited in strongly nonlinear systems and their extrapolation behaviour outside the range of calibration data is unreliable. These limitations have collectively catalysed the rapid growth of machine learning and deep learning as complementary or alternative tools for soil--water modelling. The limitations of physically-based hydrological models include extensive parameterisation requirements, restricted spatial resolution, potential inaccuracies arising from structural assumptions under complex field conditions, and high computational demands that hinder real-time operational applications:
+
+\begin{itemize}
+    \item First, physically-based models require extensive parameterisation. SWAT, for example, may involve hundreds of spatially distributed parameters describing soil properties, land use, and channel hydraulics, many of which cannot be directly measured and must be inferred through computationally intensive calibration procedures.
+    \item Second, the spatial resolution of these models is constrained by the availability of input data and computational resources. Representing sub-field heterogeneity in regional or global applications is generally infeasible.    
+    \item Third, the model structural assumptions (e.g., the Richards equation and the Green--Ampt infiltration model) may not hold under all conditions encountered in practice, particularly in degraded soils with complex pore geometries or in the presence of non-equilibrium flow phenomena.    
+    \item Fourth, the computational cost of running physically-based models at scales relevant to real-time operational management is prohibitive without significant simplification.
+\end{itemize}
 
 Hybrid model architectures, which integrate the process knowledge embedded in physically-based models with the pattern-recognition capabilities of machine learning, are increasingly recognised as a promising path forward. Physics-informed neural networks (PINNs), for example, incorporate differential equation constraints directly into the neural network loss function, ensuring that the learned solution remains consistent with governing physical laws even in data-sparse regions \citep{raissi2019physics}. Similarly, machine learning models have been used to replace computationally expensive process model components (e.g., the solution of the Richards equation) with fast, accurate emulators that can be integrated into real-time decision systems.
 
@@ -514,7 +547,17 @@ Artificial intelligence encompasses a broad spectrum of computational approaches
 
 A unifying characteristic of all AI approaches is their reliance on historical data for model training: the model parameters (weights, split thresholds, kernel coefficients, etc.) are adjusted to minimise a loss function measuring the discrepancy between model predictions and observed target variables. This data-driven paradigm contrasts with the a priori specification of process equations in physically-based models, and its predictive accuracy depends critically on the volume, quality, and representativeness of the training data. In domains such as soil science where training data may be sparse, geographically biased, or collected with heterogeneous measurement protocols, this dependence introduces significant challenges that have motivated the development of transfer learning, data augmentation, and physics-informed regularisation strategies.
 
-The taxonomy of AI applications in soil and water sciences is increasingly sophisticated. At the input end, AI models ingest data from a diverse range of sources: ground-based sensors measuring soil moisture, electrical conductivity, temperature, and matric potential; meteorological stations providing precipitation, air temperature, humidity, wind speed, and solar radiation records; multispectral, hyperspectral, and synthetic aperture radar (SAR) satellite imagery; UAV-based RGB, multispectral, and thermal imagery; and agronomic records of crop variety, sowing date, fertiliser application, and yield. The heterogeneity of these data sources---in spatial and temporal resolution, measurement precision, and data format---poses significant pre-processing and data fusion challenges that must be addressed before AI models can be effectively trained and deployed.
+The taxonomy of AI applications in soil and water sciences is increasingly sophisticated, Figure \ref{fig04}. At the input end, AI models ingest data from a diverse range of sources: ground-based sensors measuring soil moisture, electrical conductivity, temperature, and matric potential; meteorological stations providing precipitation, air temperature, humidity, wind speed, and solar radiation records; multispectral, hyperspectral, and synthetic aperture radar (SAR) satellite imagery; UAV-based RGB, multispectral, and thermal imagery; and agronomic records of crop variety, sowing date, fertiliser application, and yield. 
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_04.png}
+    \end{center}
+    \caption{Taxonomy of AI methods applied in soil-water and agricultural systems. Diagram source: author.}
+    \label{fig04}
+\end{figure}
+
+The heterogeneity of these data sources---in spatial and temporal resolution, measurement precision, and data format---poses significant pre-processing and data fusion challenges that must be addressed before AI models can be effectively trained and deployed.
 
 \subsection{Classical Machine Learning Algorithms}
 
@@ -666,26 +709,35 @@ Gradient boosting is an ensemble technique in which learners are added sequentia
 In soil and water science applications, XGBoost and gradient boosting have demonstrated superior performance compared with RF and SVM in several benchmarking studies on soil hydraulic property prediction, irrigation demand forecasting, and soil nutrient mapping. Key advantages include the ability to handle missing predictor values natively, efficient implementation with parallel computation, and built-in regularisation terms that control model complexity. Gradient boosting methods are increasingly combined with SHAP (SHapley Additive exPlanations) values \citep{lundberg2017unified} to provide feature attribution scores that quantify the contribution of each input variable to individual predictions, substantially improving model interpretability without sacrificing predictive accuracy \citep{Lemenkova202518, Lemenkova202505}.
 
 \subsection{Deep Learning Architectures}
+Representative deep learning architectures for spatiotemporal soil moisture prediction are compared in terms of their approaches to spatial feature learning and temporal dependency modeling. Differences among CNN–LSTM, ConvLSTM, and graph-based temporal frameworks in data representation, network connectivity, and prediction mechanisms are illustrated, Figure \ref{fig05}.
 
-\subsubsection{Artificial Neural Networks}
-
-Artificial Neural Networks (ANNs) are computational systems inspired by the organisation of the biological neural network, comprising interconnected processing units (neurons) arranged in layers and trained by backpropagating gradients of a loss function through the network \citep{goodfellow2016deep}. In their shallow multi-layer perceptron (MLP) form---with one or two hidden layers---ANNs have been applied to soil science problems since the early 1990s, initially for estimation of soil hydraulic properties from texture and bulk density \citep{pachepsky1996developing} and subsequently for a wide range of prediction tasks including soil moisture content, evapotranspiration, crop water demand, and water quality indices.
-
-Although shallow ANNs demonstrated useful predictive skill in many of these applications, their universal approximation properties are only fully realised with sufficient depth and width, and their performance tends to degrade relative to ensemble tree methods when training data are limited. Deep feedforward networks, with many hidden layers and nonlinear activation functions (ReLU, Leaky ReLU, sigmoid), can learn highly complex mappings, but are prone to overfitting without appropriate regularisation (dropout, weight decay, batch normalisation) and require larger training datasets. Recent work has demonstrated the utility of deep ANNs combined with ensemble techniques for estimating soil water retention curves and hydraulic conductivity functions from basic soil descriptors across diverse global soil datasets \citep{Lemenkova202403, Lemenkova202410}.
-
-\subsubsection{Convolutional Neural Networks}
+\subsubsection{Convolutional Neural Networks (CNN)}
 
 Convolutional Neural Networks (CNNs) are the dominant deep learning architecture for tasks involving spatially structured data, particularly images \citep{lecun1998gradient}. CNNs exploit the spatial locality of features in images through the use of local receptive fields, weight sharing across spatial positions, and hierarchical feature extraction through successive convolutional, normalisation, and pooling operations. These design principles confer powerful translation invariance and computational efficiency relative to fully connected networks, enabling CNNs to learn rich spatial representations from large image datasets.
 
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_05.png}
+    \end{center}
+    \caption{Deep learning architectures for spatiotemporal soil moisture prediction. Diagram source: author.}
+    \label{fig05}
+\end{figure}
+
 In the soil and water sciences, CNNs have found widespread application in the analysis of satellite and UAV imagery for soil classification, soil moisture estimation, crop stress detection, and irrigation mapping. SAR-based soil moisture retrieval has been substantially improved by deep CNN architectures that exploit the spatial context of radar backscatter signals and can account for topographic, vegetation, and surface roughness effects that confound classical retrieval algorithms \citep{hajj2017soil, Lemenkova202402}. Hyperspectral CNNs---designed to process image cubes with hundreds of spectral channels---have achieved state-of-the-art accuracy in soil organic carbon mapping from airborne and proximal sensing data by simultaneously exploiting spectral and spatial information. Transfer learning from large-scale pretrained CNN models (e.g., those trained on ImageNet) to domain-specific soil science tasks has been shown to dramatically reduce the amount of labelled training data required for fine-tuning, facilitating the development of high-accuracy models even in data-scarce agricultural regions.
 
-\subsubsection{Recurrent Neural Networks and Long Short-Term Memory}
+\subsubsection{Long Short-Term Memory (LSTM) and Recurrent Neural Networks (RNN)}
 
 Many critical soil--water processes are inherently temporal in character: soil moisture evolves in response to sequences of rainfall, evapotranspiration, and irrigation events; streamflow is generated by the cumulative effect of antecedent soil moisture conditions and precipitation over preceding hours to days; crop growth and water demand follow phenological trajectories that unfold over the growing season. Modelling these temporal dependencies requires architectures capable of representing dynamic system state over extended time horizons.
 
 Recurrent Neural Networks (RNNs) address this requirement by maintaining a hidden state vector that is updated at each time step as a function of the current input and the previous hidden state. However, standard RNNs are notoriously difficult to train on long sequences due to the vanishing and exploding gradient problem---the tendency for backpropagated gradients to diminish or amplify exponentially through many time steps \citep{bengio1994learning}. Long Short-Term Memory (LSTM) networks \citep{hochreiter1997long} overcome this limitation through the introduction of a gated memory cell architecture comprising input, forget, and output gates that selectively regulate the flow of information into, within, and out of the cell. This architecture enables LSTMs to learn long-range dependencies spanning hundreds to thousands of time steps, making them exceptionally well-suited to hydrological and soil moisture time-series modelling.
 
 LSTM networks have achieved state-of-the-art performance in rainfall-runoff modelling, outperforming conceptual hydrological models calibrated on thousands of catchments in large-sample benchmarking studies \citep{kratzert2018rainfall}. In soil moisture prediction, LSTMs trained on combinations of meteorological forcing and in situ measurements have demonstrated superior temporal generalisation relative to shallow ML models, capturing soil moisture dynamics across wet and dry periods, freeze-thaw cycles, and inter-annual variability. Bidirectional LSTM (BiLSTM) architectures, which process sequences in both forward and reverse directions, and encoder-decoder LSTMs for multi-step ahead forecasting, represent further refinements that extend the applicability of recurrent architectures to complex temporal prediction tasks in precision agriculture.
+
+\subsubsection{Artificial Neural Networks}
+
+Artificial Neural Networks (ANNs) are computational systems inspired by the organisation of the biological neural network, comprising interconnected processing units (neurons) arranged in layers and trained by backpropagating gradients of a loss function through the network \citep{goodfellow2016deep}. In their shallow multi-layer perceptron (MLP) form---with one or two hidden layers---ANNs have been applied to soil science problems since the early 1990s, initially for estimation of soil hydraulic properties from texture and bulk density \citep{pachepsky1996developing} and subsequently for a wide range of prediction tasks including soil moisture content, evapotranspiration, crop water demand, and water quality indices.
+
+Although shallow ANNs demonstrated useful predictive skill in many of these applications, their universal approximation properties are only fully realised with sufficient depth and width, and their performance tends to degrade relative to ensemble tree methods when training data are limited. Deep feedforward networks, with many hidden layers and nonlinear activation functions (ReLU, Leaky ReLU, sigmoid), can learn highly complex mappings, but are prone to overfitting without appropriate regularisation (dropout, weight decay, batch normalisation) and require larger training datasets. Recent work has demonstrated the utility of deep ANNs combined with ensemble techniques for estimating soil water retention curves and hydraulic conductivity functions from basic soil descriptors across diverse global soil datasets \citep{Lemenkova202403, Lemenkova202410}.
 
 \subsubsection{Transformer-Based Architectures and Attention Mechanisms}
 
@@ -697,7 +749,15 @@ In soil and water science, transformer-based models have been applied to time-se
 
 \subsubsection{Distributed Training Frameworks}
 
-Training large deep learning models on agricultural datasets of realistic scale---encompassing multiple seasons, multiple farms, and multiple sensor modalities---demands computational resources that exceed the capacity of a single machine. Distributed deep learning frameworks distribute both the data and the computational workload across multiple processors or nodes, enabling training to complete in hours rather than weeks \citep{ben2019demystifying}. Two principal paradigms are employed: data parallelism, in which each worker processes a distinct shard of the training data and the computed gradients are aggregated (by summation or averaging) before the model weights are updated; and model parallelism, in which the model itself is partitioned across workers, with each worker responsible for the forward and backward passes through a subset of layers.
+Training large deep learning models on agricultural datasets of realistic scale---encompassing multiple seasons, multiple farms, and multiple sensor modalities---demands computational resources that exceed the capacity of a single machine. Distributed deep learning frameworks distribute both the data and the computational workload across multiple processors or nodes, enabling training to complete in hours rather than weeks \citep{ben2019demystifying}. Two principal paradigms are employed: data parallelism, in which each worker processes a distinct shard of the training data and the computed gradients are aggregated (by summation or averaging) before the model weights are updated; and model parallelism, in which the model itself is partitioned across workers, with each worker responsible for the forward and backward passes through a subset of layers, Figure \ref{fig06}.
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_06.png}
+    \end{center}
+    \caption{Architecture of distributed deep learning and federated learning in smart agriculture. Diagram source: author.}
+    \label{fig06}
+\end{figure}
 
 Large-scale distributed training has enabled the development of foundation models for earth observation---deep learning models pretrained on vast corpora of satellite imagery spanning diverse land cover types, seasons, and geographic regions---that can be fine-tuned with relatively small amounts of task-specific data for downstream applications including soil property mapping, irrigation classification, and crop type delineation. Projects such as the NASA-IBM Prithvi model and ESA's EuroSAT benchmark have demonstrated the value of this approach for accelerating the development of high-accuracy agricultural monitoring systems.
 
@@ -725,7 +785,15 @@ At the field scale, LSTM and hybrid CNN--LSTM models have achieved root mean squ
 
 \subsubsection{Smart Irrigation and Water Use Optimisation}
 
-Reinforcement learning (RL) provides a natural framework for optimising irrigation scheduling decisions, in which an agent (the irrigation controller) takes actions (irrigation application amounts) in an environment (the crop--soil--atmosphere system) to maximise a cumulative reward signal encoding crop yield and water productivity \citep{yang2020rl}. RL-based irrigation controllers, trained in simulation using calibrated crop growth models as environment simulators and then fine-tuned on real field data, have demonstrated water savings of 20--35\% relative to calendar-based irrigation schedules without yield penalty in controlled experiments on vegetable and grain crops.
+Reinforcement learning (RL) provides a natural framework for optimising irrigation scheduling decisions, in which an agent (the irrigation controller) takes actions (irrigation application amounts) in an environment (the crop--soil--atmosphere system) to maximise a cumulative reward signal encoding crop yield and water productivity \citep{yang2020rl}. RL-based irrigation controllers, trained in simulation using calibrated crop growth models as environment simulators and then fine-tuned on real field data, improve water savings of 20--35\% relative to calendar-based irrigation schedules without yield penalty in controlled experiments on vegetable and grain crops.
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_07.png}
+    \end{center}
+    \caption{AI workflow for smart irrigation and water management systems. Diagram source: author.}
+    \label{fig07}
+\end{figure}
 
 Deep Q-networks (DQN) and actor-critic algorithms (Proximal Policy Optimisation, Soft Actor-Critic) have been applied to multi-variable irrigation optimisation problems that simultaneously consider soil moisture, crop growth stage, weather forecast uncertainty, and economic constraints. Integrating these RL frameworks with real-time IoT sensor networks and probabilistic weather forecasting represents a compelling direction for practical precision irrigation systems.
 
@@ -1023,9 +1091,21 @@ The deployment of AI and deep learning systems in agricultural water management 
 \subsection{Explainable Artificial Intelligence}
 % ----------------------------------------------------------
 
-The opacity of complex machine learning models---particularly deep neural networks with millions of parameters---has been a persistent concern since their widespread adoption. Although these models achieve impressive predictive accuracy, their internal representations are not directly interpretable by human experts, limiting their acceptance in high-stakes decision contexts such as irrigation management, drought early warning, and land-use planning, where the consequences of erroneous decisions can be severe and difficult to reverse \citep{arrieta2020explainable}. The field of explainable AI (XAI) has developed a rich toolkit of post-hoc and intrinsic explanation methods designed to make model behaviour interpretable without sacrificing predictive performance.
+The opacity of complex machine learning models---particularly deep neural networks with millions of parameters---has been a persistent concern since their widespread adoption. Although these models achieve impressive predictive accuracy, their internal representations are not directly interpretable by human experts, limiting their acceptance in high-stakes decision contexts such as irrigation management, drought early warning, and land-use planning, where the consequences of erroneous decisions can be severe and difficult to reverse \citep{arrieta2020explainable}. The field of explainable AI (XAI) has developed a rich toolkit of post-hoc and intrinsic explanation methods designed to make model behaviour interpretable without sacrificing predictive performance, Figure \ref{fig08}.
 
-Among post-hoc explanation methods, SHapley Additive exPlanations (SHAP) \citep{lundberg2017unified} have emerged as the most widely adopted approach in soil and water science applications, owing to their rigorous game-theoretic foundation (based on Shapley values from cooperative game theory), their consistency across model classes, and their availability in efficient tree-based and kernel-based implementations. SHAP decomposes the prediction for each individual sample into additive contributions from each input feature, providing both local (sample-level) and global (dataset-level) attribution scores. In digital soil mapping applications, SHAP analysis has revealed that environmental covariates such as normalised difference vegetation index (NDVI), terrain curvature, and land surface temperature consistently rank among the most important predictors of soil moisture and organic carbon content across diverse geographic regions, providing physically interpretable validation of model behaviour \citep{padarian2019using}. In irrigation scheduling applications, SHAP-based attribution has been used to identify which meteorological variables---evapotranspiration demand, antecedent rainfall, vapour pressure deficit---most strongly drive irrigation timing recommendations, enabling agronomists to audit model decisions against domain knowledge \citep{zhou2023xai}.
+Among post-hoc explanation methods, SHapley Additive exPlanations (SHAP) \citep{lundberg2017unified} have emerged as the most widely adopted approach in soil and water science applications, owing to their rigorous game-theoretic foundation (based on Shapley values from cooperative game theory), their consistency across model classes, and their availability in efficient tree-based and kernel-based implementations. SHAP decomposes the prediction for each individual sample into additive contributions from each input feature, providing both local (sample-level) and global (dataset-level) attribution scores. 
+
+In digital soil mapping applications, SHAP analysis has revealed that environmental covariates such as normalised difference vegetation index (NDVI), terrain curvature, and land surface temperature consistently rank among the most important predictors of soil moisture and organic carbon content across diverse geographic regions, providing physically interpretable validation of model behaviour \citep{padarian2019using}. 
+
+In irrigation scheduling applications, SHAP-based attribution has been used to identify which meteorological variables---evapotranspiration demand, antecedent rainfall, vapour pressure deficit---most strongly drive irrigation timing recommendations, enabling agronomists to audit model decisions against domain knowledge \citep{zhou2023xai}.
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_08.png}
+    \end{center}
+    \caption{Explainable AI framework for agricultural decision support. Diagram source: author.}
+    \label{fig08}
+\end{figure}
 
 Local Interpretable Model-Agnostic Explanations (LIME) \citep{ribeiro2016lime} provide an alternative post-hoc approach in which a locally faithful linear surrogate model is fitted to the predictions of a complex model in the neighbourhood of each input sample. LIME is particularly useful for explaining predictions in image-based applications---for example, identifying which regions of a multispectral or SAR image most strongly influenced a soil classification or moisture retrieval prediction---and has been applied to CNN-based crop stress detection and soil type mapping from UAV and satellite imagery. Gradient-based saliency methods, including Gradient-weighted Class Activation Mapping (Grad-CAM) \citep{selvaraju2017gradcam} and integrated gradients, provide pixel-level attribution maps for CNN models, visually highlighting the image regions that most influenced a prediction.
 
@@ -1149,41 +1229,34 @@ The integration of domain physical knowledge with deep learning through physics-
 
 \subsection{Federated Learning in Agriculture}
 
-Federated learning can facilitate collaborative agricultural intelligence while preserving privacy and decentralization.
+Federated learning can facilitate collaborative agricultural intelligence while preserving privacy and decentralization. Federated learning (FL) offers a technically and legally robust mechanism for aggregating AI model training across geographically distributed farms, research stations, and national agricultural networks without requiring sensitive farm-level data to be centralised or disclosed \citep{mcmahan2017communication}. The agricultural domain presents distinctive challenges for FL that motivate important future research directions. Non-IID data heterogeneity---arising from the pronounced variation in soil types, climate regimes, crop species, and management practices across participating nodes---causes significant performance degradation under standard FedAvg aggregation, necessitating personalised FL approaches that maintain local model components adapted to site-specific conditions while sharing globally beneficial representations. 
 
-Federated learning (FL) offers a technically and legally robust mechanism for aggregating AI model training across geographically distributed farms, research stations, and national agricultural networks without requiring sensitive farm-level data to be centralised or disclosed \citep{mcmahan2017communication}. The agricultural domain presents distinctive challenges for FL that motivate important future research directions. Non-IID data heterogeneity---arising from the pronounced variation in soil types, climate regimes, crop species, and management practices across participating nodes---causes significant performance degradation under standard FedAvg aggregation, necessitating personalised FL approaches that maintain local model components adapted to site-specific conditions while sharing globally beneficial representations. Communication-efficient FL algorithms that compress gradient updates through quantisation, sparsification, or local SGD with infrequent synchronisation are needed to accommodate the limited and intermittent bandwidth of rural agricultural networks. The combination of FL with differential privacy mechanisms---adding calibrated noise to local model updates before transmission to prevent inference of individual farm records from the aggregate model---requires careful calibration to balance privacy protection against the accuracy degradation imposed by noise injection, particularly for small-farm nodes with limited local training data. Future FL systems for agricultural AI should integrate standardised data harmonisation protocols, interoperable communication interfaces, and transparent audit mechanisms that enable participating farms to verify the integrity of the aggregation process and retain meaningful control over their data contributions, in alignment with emerging agricultural data governance frameworks.
+Communication-efficient FL algorithms that compress gradient updates through quantisation, sparsification, or local SGD with infrequent synchronisation are needed to accommodate the limited and intermittent bandwidth of rural agricultural networks. The combination of FL with differential privacy mechanisms---adding calibrated noise to local model updates before transmission to prevent inference of individual farm records from the aggregate model---requires careful calibration to balance privacy protection against the accuracy degradation imposed by noise injection, particularly for small-farm nodes with limited local training data. Future FL systems for agricultural AI should integrate standardised data harmonisation protocols, interoperable communication interfaces, and transparent audit mechanisms that enable participating farms to verify the integrity of the aggregation process and retain meaningful control over their data contributions, in alignment with emerging agricultural data governance frameworks.
 
 \subsection{Edge AI and Smart Farming}
 
-Edge computing and low-power AI devices will enable autonomous irrigation and real-time field-scale analytics.
+Edge computing and low-power AI devices will enable autonomous irrigation and real-time field-scale analytics. The continuing miniaturisation and energy efficiency improvements of neuromorphic and application-specific integrated circuit (ASIC) hardware, combined with advances in model compression through knowledge distillation, quantisation-aware training, and neural architecture search, are progressively closing the gap between the computational requirements of state-of-the-art deep learning models and the resource budgets of field-deployable edge processors \citep{martinez2025edge}. 
 
-The continuing miniaturisation and energy efficiency improvements of neuromorphic and application-specific integrated circuit (ASIC) hardware, combined with advances in model compression through knowledge distillation, quantisation-aware training, and neural architecture search, are progressively closing the gap between the computational requirements of state-of-the-art deep learning models and the resource budgets of field-deployable edge processors \citep{martinez2025edge}. Future smart farming systems will likely comprise hierarchical edge-fog-cloud AI architectures in which ultra-low-power microcontrollers at the sensor node level run highly compressed models for real-time anomaly detection and actuation control; intermediate fog gateway processors aggregate sensor streams and run more complex soil moisture and evapotranspiration prediction models; and cloud or HPC resources periodically retrain global models and push updated lightweight models to the edge tier. Autonomous variable-rate irrigation systems---comprising distributed wireless sensor arrays, AI-driven soil moisture prediction at sub-field resolution, weather-forecast-integrated optimisation, and automated valve actuation---represent a realistically near-term technology convergence that could substantially reduce agricultural water consumption in irrigated systems. Standardising sensor communication protocols (LoRaWAN, NB-IoT, MQTT), data formats, and AI model interchange standards across hardware vendors and platform providers is essential to enable the interoperability required for scaling these systems from experimental deployments to commercial precision agriculture ecosystems.
+Future smart farming systems will likely comprise hierarchical edge-fog-cloud AI architectures in which ultra-low-power microcontrollers at the sensor node level run highly compressed models for real-time anomaly detection and actuation control, Figure \ref{fig09}.
+
+\begin{figure}[H]
+    \begin{center}
+	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_09.png}
+    \end{center}
+    \caption{Future ecosystem of AI-enabled sustainable agriculture. Diagram source: author.}
+    \label{fig09}
+\end{figure}
+
+Among other, intermediate fog gateway processors aggregate sensor streams and run more complex soil moisture and evapotranspiration prediction models; and cloud or HPC resources periodically retrain global models and push updated lightweight models to the edge tier. Autonomous variable-rate irrigation systems---comprising distributed wireless sensor arrays, AI-driven soil moisture prediction at sub-field resolution, weather-forecast-integrated optimisation, and automated valve actuation---represent a realistically near-term technology convergence that could substantially reduce agricultural water consumption in irrigated systems. Standardising sensor communication protocols (LoRaWAN, NB-IoT, MQTT), data formats, and AI model interchange standards across hardware vendors and platform providers is essential to enable the interoperability required for scaling these systems from experimental deployments to commercial precision agriculture ecosystems.
 
 \subsection{Digital Twins for Soil--Water Systems}
 
-Digital twins can simulate soil-water interactions and optimize agricultural management under dynamic environmental conditions.
+Digital twins (DT) can simulate soil-water interactions and optimize agricultural management under dynamic environmental conditions. DT technology---creating real-time, continuously updated virtual replicas of physical agricultural systems that synchronise observations from sensor networks and satellite platforms with AI and physically-based simulation models---offers transformative potential for soil--water management and climate adaptation planning \citep{pylianidis2021digital}. An agricultural digital twin integrates data streams from field sensors, satellite observations, weather forecasts, and agronomic management records into a dynamically updated state representation of the soil--water--plant--atmosphere system, which serves as both a predictive engine for forward simulation under different irrigation and climate scenarios and a decision-support interface for farm managers and water resource planners. 
 
-Digital twin (DT) technology---creating real-time, continuously updated virtual replicas of physical agricultural systems that synchronise observations from sensor networks and satellite platforms with AI and physically-based simulation models---offers transformative potential for soil--water management and climate adaptation planning \citep{pylianidis2021digital}. An agricultural digital twin integrates data streams from field sensors, satellite observations, weather forecasts, and agronomic management records into a dynamically updated state representation of the soil--water--plant--atmosphere system, which serves as both a predictive engine for forward simulation under different irrigation and climate scenarios and a decision-support interface for farm managers and water resource planners. Machine learning surrogate models trained to emulate high-fidelity HYDRUS or SWAT simulations at low computational cost are the enabling technology for real-time DT updating: they provide sub-second response times necessary for interactive what-if scenario exploration while maintaining quantitative consistency with the physical process representations embedded in the reference simulators. Future research should address the development of DT architectures that quantify and propagate model and observational uncertainties throughout the virtual system state, provide rigorous validation frameworks for assessing DT predictive fidelity under novel forcing conditions, and support multi-stakeholder decision-making across the spatial scales relevant to both individual farm management and watershed-level water allocation governance. The integration of agricultural DTs with climate service platforms---providing dynamically downscaled seasonal climate forecasts as boundary conditions for soil--water system simulation---would enable adaptive water management that anticipates seasonal rainfall variability months in advance rather than merely reacting to observed soil moisture deficits.
+Machine learning surrogate models trained to emulate high-fidelity HYDRUS or SWAT simulations at low computational cost are the enabling technology for real-time DT updating: they provide sub-second response times necessary for interactive what-if scenario exploration while maintaining quantitative consistency with the physical process representations embedded in the reference simulators. Future research should address the development of DT architectures that quantify and propagate model and observational uncertainties throughout the virtual system state, provide rigorous validation frameworks for assessing DT predictive fidelity under novel forcing conditions, and support multi-stakeholder decision-making across the spatial scales relevant to both individual farm management and watershed-level water allocation governance. The integration of agricultural DTs with climate service platforms---providing dynamically downscaled seasonal climate forecasts as boundary conditions for soil--water system simulation---would enable adaptive water management that anticipates seasonal rainfall variability months in advance rather than merely reacting to observed soil moisture deficits.
 
 \section{Conclusions}
 Artificial intelligence, machine learning, and distributed deep learning are transforming soil science and sustainable agricultural water management. AI-driven frameworks provide powerful tools for soil moisture prediction, irrigation optimization, digital soil mapping, and climate resilience. Despite significant progress, challenges related to data quality, interpretability, computational requirements, and real-time deployment remain unresolved. Future research should emphasize explainable AI, physics-informed learning, federated intelligence, and integrated digital agricultural ecosystems to support resilient and sustainable food production systems.
-
-\section*{Figures}
-
-\begin{itemize}
-\item Figure 1. Global overview of water scarcity and agricultural water demand under climate change scenarios.
-\item Figure 2. Conceptual diagram of soil--water interaction processes in agricultural systems.
-\item Figure 3. Comparison between physics-based and AI-based soil-water modelling frameworks.
-\item Figure 4. Taxonomy of AI methods applied in soil-water and agricultural systems.
-\item Figure 5. Deep learning architectures for spatiotemporal soil moisture prediction.
-\item Figure 6. Architecture of distributed deep learning and federated learning in smart agriculture.
-\item Figure 7. Remote sensing workflow for AI-based soil moisture estimation.
-\item Figure 8. AI workflow for smart irrigation and water management systems.
-\item Figure 9. GIS-integrated digital soil mapping framework.
-\item Figure 10. Explainable AI framework for agricultural decision support.
-\item Figure 11. Major technical challenges in AI-based soil-water systems.
-\item Figure 12. Future ecosystem of AI-enabled sustainable agriculture.
-\end{itemize}
 
 %----------- section ----------->
 \authorcontributions{Supervision, conceptualization, methodology, software, resources, funding acquisition, and project administration, writing---original draft preparation, methodology, software, data curation, visualization, formal analysis, validation, writing---review and editing, and investigation, P.L.}
