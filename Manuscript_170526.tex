@@ -47,6 +47,9 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{adjustbox}
+\usepackage{ltablex}
+\keepXColumns
+\usepackage{booktabs}
 
 \definecolor{deepblue}{rgb}{0,0,0.5}
 \definecolor{deepred}{rgb}{0.6,0,0}
@@ -90,30 +93,30 @@
 \newcommand{\orcidauthorA}{0000-0002-5759-1089} % Polina Add \orcidA{} behind the author's name
 
 % Authors, for the paper (add full first names)
-\Author{Polina Lemenkova $^{1,2,3,4}$*\orcidA{}}
+\Author{Polina Lemenkova $^{1,2,3}$*\orcidA{}}
 
 % MDPI internal command: Authors, for metadata in PDF
-\AuthorNames{Polina Lemenkova, Firstname Lastname}
+\AuthorNames{Polina Lemenkova}
 
 % MDPI internal command: Authors, for citation in the left column
-\AuthorCitation{Lemenkova, P., Lastname, F.}
+\AuthorCitation{Lemenkova, P.}
 
 % Affiliations / Addresses
 \address{%
-$^{1}$ \quad Bureau de Recherches G\'eologiques et Mini\`eres (BRGM), Orl\'eans, France
+$^{1}$ \quad Bureau de Recherches G\'eologiques et Mini\`eres (BRGM). 3 avenue Claude-Guillemin, 45060 Orl\'eans, France.
 
-$^{2}$ \quad LE STUDIUM, Institut d'Etudes Avanc\'ees du Val de Loire, 1 rue Dupanloup 45000, Orl\'eans, France.
+$^{2}$ \quad LE STUDIUM, Institut d'Etudes Avanc\'ees du Val de Loire. 1 rue Dupanloup 45000, Orl\'eans, France.
 
-$^{3}$ \quad Le laboratoire PRISME, Universit\'e d'Orl\'eans, Institut National des Sciences Appliqu\'ees de Centre-Val de Loire (INSA CVL, UR 4229), Orl\'eans, France. 
+%$^{3}$ \quad Le laboratoire PRISME, Universit\'e d'Orl\'eans, Institut National des Sciences Appliqu\'ees de Centre-Val de Loire (INSA CVL, UR 4229), Orl\'eans, France. 
 
-$^{4}$ \quad La Technopole d'Orl\'eans, 1 Avenue du Champ de Mars, 45100 Orl\'eans, France.
+$^{3}$ \quad La Technopole d'Orl\'eans. 1 avenue du Champ de Mars, 45100 Orl\'eans, France.
 }
 
 % Contact information of the corresponding author
 \corres{Correspondence: polina.lemenkova@tech-orleans.fr ; Tel.: (+33)0633148601 (P.L.)}
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{A single paragraph of about 200 words maximum.}
+\abstract{\textcolor{red}{A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum. A single paragraph of about 200 words maximum.}}
 
 % Keywords
 \keyword{Soil-water interactions; Machine learning; Deep learning; Distributed learning; Precision agriculture; Smart irrigation; Soil hydrology; Artificial intelligence; Remote sensing; Digital agriculture} 
@@ -147,7 +150,58 @@ Understanding these dynamics is essential not only for optimising irrigation eff
 
 \subsection{Emergence of AI and Data-Driven Agriculture}
 
-The past decade has witnessed a technological transformation in the methods available for monitoring, modelling, and managing soil--water systems. The proliferation of low-cost Internet of Things (IoT) sensor networks, unmanned aerial vehicles (UAVs), and high-resolution satellite remote sensing platforms---including Sentinel-1/2, Landsat-8/9, MODIS, and SMAP---has resulted in an unprecedented abundance of spatially and temporally dense environmental data \citep{ran2022review}. Simultaneously, advances in cloud computing infrastructure, edge computing, and high-performance computing have democratised access to the computational resources required to process and analyse these large, heterogeneous datasets. These twin developments have created fertile conditions for the rapid adoption of artificial intelligence (AI) and machine learning (ML) methods across the agricultural and environmental sciences.
+The past decade has witnessed a technological transformation in the methods available for monitoring, modelling, and managing soil--water systems, Table \ref{tab:evolution_models}. The proliferation of low-cost Internet of Things (IoT) sensor networks, unmanned aerial vehicles (UAVs), and high-resolution satellite remote sensing platforms---including Sentinel-1/2, Landsat-8/9, MODIS, and SMAP---has resulted in an unprecedented abundance of spatially and temporally dense environmental data \citep{ran2022review}. Simultaneously, advances in cloud computing infrastructure, edge computing, and high-performance computing have democratised access to the computational resources required to process and analyse these large, heterogeneous datasets. These twin developments have created fertile conditions for the rapid adoption of artificial intelligence (AI) and machine learning (ML) methods across the agricultural and environmental sciences.
+
+%============= TABLE ==================================>
+%\begin{table}[H]
+\begin{table*}[!t]
+\centering
+\caption{Evolution of modelling approaches in soil--water systems from empirical and physics-based models to modern artificial intelligence and distributed deep learning frameworks.}
+\label{tab:evolution_models}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{1.0cm} p{1.5cm} p{2.5cm} p{3.5cm} p{3.5cm}}
+\hline
+\textbf{Era} & \textbf{Modelling Approach} & \textbf{Representative Models} & \textbf{Strengths} & \textbf{Limitations} \\
+\toprule
+1950s--1980s &
+Empirical and Statistical Models &
+Linear regression, empirical infiltration equations, water balance models &
+Simple implementation, low computational requirements, easy interpretation, suitable for small datasets &
+Limited capability for nonlinear processes, poor generalization under heterogeneous environmental conditions \\
+\midrule
+1980s--2000s &
+Physics-Based Hydrological Models &
+SWAT, HYDRUS, MODFLOW, Richards equation, Darcy-based models &
+Physically interpretable, process-based understanding, strong theoretical foundation, effective for hydrological simulations &
+Require extensive calibration, sensitive to parameter uncertainty, computationally expensive for large-scale applications \\
+\midrule
+2000s--2015 &
+Machine Learning Models &
+Support Vector Machines (SVM), Random Forest (RF), Decision Trees, kNN, Artificial Neural Networks (ANN) &
+Capable of modeling nonlinear relationships, robust prediction accuracy, reduced dependence on physical assumptions &
+Require high-quality datasets, feature engineering often necessary, limited interpretability in some models \\
+\midrule
+2015--2020 &
+Deep Learning Approaches &
+Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Long Short-Term Memory (LSTM) &
+Excellent spatiotemporal learning capability, automatic feature extraction, strong performance with remote sensing and time-series data &
+Large training datasets required, high computational cost, risk of overfitting, black-box behavior \\
+\midrule
+2020--Present &
+Advanced AI and Distributed Intelligence &
+Transformers, Federated Learning, Edge AI, Physics-Informed Neural Networks (PINNs), Distributed Deep Learning &
+Real-time analytics, scalability, decentralized learning, privacy preservation, integration with IoT and smart farming systems &
+Infrastructure complexity, high energy consumption, limited explainability, challenges in standardization and deployment \\
+\midrule
+Future Trends &
+Hybrid Intelligent Systems &
+Digital twins, Explainable AI (XAI), autonomous irrigation systems, climate-integrated AI frameworks &
+Adaptive decision-making, improved sustainability, interpretable predictions, integration with climate resilience strategies &
+Requires interdisciplinary integration, lack of benchmark datasets, regulatory and ethical concerns \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+%============= TABLE ==================================<
 
 AI-driven frameworks offer several capabilities that are difficult or impossible to achieve with conventional physically-based models. Deep learning architectures---including convolutional neural networks (CNNs), long short-term memory (LSTM) networks, and transformer-based attention models---are capable of learning highly complex, nonlinear mappings between input variables (soil properties, meteorological forcing, remote sensing signals) and target outputs (soil moisture content, evapotranspiration rates, crop yield) directly from observational data, without requiring the explicit specification of process equations \citep{lecun2015deep}. These models can be trained on historical datasets of arbitrary size, updated in real time as new observations become available, and deployed across diverse agroecological contexts through transfer learning and domain adaptation techniques.
 
@@ -173,7 +227,76 @@ This review addresses these gaps by providing a structured synthesis of recent d
 
 \subsection{Soil Physical and Hydraulic Properties}
 
-A thorough understanding of soil physical and hydraulic properties is foundational to any quantitative treatment of soil--water dynamics and forms an essential prerequisite for the effective application of AI-based predictive models. The key physical descriptors of a soil include its particle-size distribution (texture), aggregate structure, bulk density ($\rho_b$), total porosity ($\phi$), and organic matter content. Together, these properties determine the geometry of the pore network through which water and solutes move and within which microbial communities and plant roots develop \citep{hillel2004introduction}.
+A thorough understanding of soil physical and hydraulic properties is foundational to any quantitative treatment of soil--water dynamics and forms an essential prerequisite for the effective application of AI-based predictive models. The key physical descriptors of a soil include its particle-size distribution (texture), aggregate structure, bulk density ($\rho_b$), total porosity ($\phi$), and organic matter content, Table \ref{tab:soil_hydraulic_properties}. Together, these properties determine the geometry of the pore network through which water and solutes move and within which microbial communities and plant roots develop \citep{hillel2004introduction}.
+
+%============= TABLE ==================================>
+
+\begin{longtable}{p{1.5cm} p{3cm} p{4.0cm} p{4.0cm}}
+\caption{Major soil hydraulic properties and their agricultural significance.}
+\label{tab:soil_hydraulic_properties} \\
+\toprule
+\textbf{Hydraulic Property} &
+\textbf{Definition} &
+\textbf{Agricultural Significance} &
+\textbf{Factors Affecting Soil Property} \\
+\midrule
+Porosity &
+Fraction of soil volume occupied by pores or voids &
+Controls water storage capacity, aeration, root penetration, and microbial activity &
+Soil texture, organic matter, compaction, aggregation, tillage practices \\
+\midrule
+Bulk Density &
+Mass of dry soil per unit bulk volume &
+Influences root growth, infiltration, and water retention; high bulk density restricts crop productivity &
+Soil compaction, machinery traffic, soil texture, moisture content \\
+\midrule
+Field Capacity &
+Amount of water retained in soil after gravitational drainage &
+Represents the upper limit of plant-available water and determines irrigation scheduling &
+Texture, structure, organic matter, pore-size distribution \\
+\midrule
+Permanent Wilting Point &
+Soil moisture level below which plants cannot extract water &
+Defines lower threshold of plant-available water and drought stress conditions &
+Clay content, salinity, organic matter, soil mineralogy \\
+\midrule
+Available Water Capacity &
+Difference between field capacity and wilting point &
+Determines the quantity of water accessible for crop uptake and irrigation efficiency &
+Texture, rooting depth, soil structure, organic matter \\
+\midrule
+Hydraulic Conductivity &
+Ability of soil to transmit water under saturated or unsaturated conditions &
+Controls infiltration, drainage, groundwater recharge, and irrigation performance &
+Texture, pore connectivity, compaction, soil moisture conditions \\
+\midrule
+Infiltration Rate &
+Rate at which water enters the soil surface &
+Affects runoff generation, irrigation uniformity, erosion risk, and water conservation &
+Surface crusting, vegetation cover, soil texture, tillage practices \\
+\midrule
+Soil Water Retention &
+Capacity of soil to retain water against gravitational forces &
+Critical for drought resistance, irrigation planning, and crop-water availability &
+Clay minerals, organic matter, pore-size distribution \\
+\midrule
+Matric Potential &
+Energy status of water held within soil pores due to capillary and adsorptive forces &
+Influences plant water uptake, unsaturated flow, and root-zone dynamics &
+Soil texture, salinity, moisture content, pore geometry \\
+\midrule
+Capillary Rise &
+Upward movement of water through soil pores due to capillary forces &
+Supports crop water availability in shallow groundwater regions and arid environments &
+Pore-size distribution, groundwater depth, soil texture \\
+\midrule
+Water Holding Capacity &
+Maximum amount of water retained by soil after saturation and drainage &
+Determines irrigation frequency, crop resilience, and water-use efficiency &
+Organic matter, texture, aggregation, compaction \\
+\bottomrule
+\end{longtable}
+%============= TABLE ==================================<
 
 Soil texture---the relative proportions of sand, silt, and clay fractions---exerts a primary control on hydraulic behaviour. Sandy soils are characterised by large inter-particle pores, rapid drainage, low water-holding capacity, and high saturated hydraulic conductivity ($K_s$). Clay-rich soils, by contrast, possess predominantly micropores and mesopores that confer high water retention and low $K_s$, but are also prone to shrinkage-induced cracking upon desiccation and to surface sealing under rainfall impact. Loamy soils, occupying an intermediate textural position, generally offer the most favourable combination of water retention and aeration for crop production. The United States Department of Agriculture (USDA) and the Food and Agriculture Organization (FAO) textural classification schemes provide internationally standardised frameworks for communicating soil texture, and texture-based pedotransfer functions (PTFs) are routinely used to estimate hydraulic parameters from routinely measured soil properties \citep{wosten2001pedotransfer}.
 
@@ -540,10 +663,8 @@ Artificial intelligence, machine learning, and distributed deep learning are tra
 \item Figure 12. Future ecosystem of AI-enabled sustainable agriculture.
 \end{itemize}
 
-\subsection*{Suggested Tables}
+\subsection*{Tables}
 \begin{itemize}
-\item Table 1. Evolution of modelling approaches in soil-water systems.
-\item Table 2. Major soil hydraulic properties and their agricultural significance.
 \item Table 3. Comparison of machine learning algorithms in soil-water modelling.
 \item Table 4. Distributed AI frameworks and agricultural applications.
 \item Table 5. AI techniques for smart irrigation and water conservation.
