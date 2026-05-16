@@ -231,6 +231,7 @@ A thorough understanding of soil physical and hydraulic properties is foundation
 
 %============= TABLE ==================================>
 
+\setcounter{table}{1}
 \begin{longtable}{p{1.5cm} p{3cm} p{4.0cm} p{4.0cm}}
 \caption{Major soil hydraulic properties and their agricultural significance.}
 \label{tab:soil_hydraulic_properties} \\
@@ -239,6 +240,16 @@ A thorough understanding of soil physical and hydraulic properties is foundation
 \textbf{Definition} &
 \textbf{Agricultural Significance} &
 \textbf{Factors Affecting Soil Property} \\
+\midrule
+\endfirsthead
+\caption[]{Major soil hydraulic properties and their agricultural significance (continued).} \\
+\toprule
+\textbf{Hydraulic Property} &
+\textbf{Definition} &
+\textbf{Agricultural Significance} &
+\textbf{Factors Affecting Soil Property} \\
+\midrule
+\endhead
 \midrule
 Porosity &
 Fraction of soil volume occupied by pores or voids &
@@ -381,6 +392,112 @@ Beyond DSM, RF has been applied to soil moisture prediction from combinations of
 \subsubsection{Gradient Boosting Methods and XGBoost}
 
 Gradient boosting is an ensemble technique in which learners are added sequentially, with each new learner fitting the residuals of the ensemble assembled so far \citep{friedman2001greedy}. Unlike RF, which builds trees independently in parallel, gradient boosting constructs trees in a stage-wise fashion, explicitly minimising a differentiable loss function. The extreme gradient boosting algorithm (XGBoost) \citep{chen2016xgboost} and its successors LightGBM and CatBoost have emerged as the state-of-the-art among tabular ML algorithms, consistently achieving top performance in data science competitions across a wide range of prediction tasks.
+
+%============= TABLE ==================================>
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{p{1.8cm} p{1.5cm} p{3.0cm} p{3.0cm} p{3.0cm}}
+\caption{Comparison of machine learning algorithms in soil--water modelling.}
+\label{tab:ml_algorithms} \\
+\toprule
+\textbf{Algorithm} &
+\textbf{Category} &
+\textbf{Strengths} &
+\textbf{Limitations} &
+\textbf{Typical Applications} \\
+\midrule
+\endfirsthead
+\caption[]{Comparison of machine learning algorithms in soil--water modelling (continued).} \\
+\toprule
+\textbf{Algorithm} &
+\textbf{Category} &
+\textbf{Strengths} &
+\textbf{Limitations} &
+\textbf{Typical Applications} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{\footnotesize\textit{Continued on next page}} \\
+\midrule
+\endfoot
+\bottomrule
+\endlastfoot
+Linear Regression &
+Supervised Learning &
+Simple implementation, computational efficiency, high interpretability &
+Limited ability to capture nonlinear relationships and complex interactions &
+Water balance estimation, evapotranspiration prediction, trend analysis \\
+\midrule
+Decision Trees &
+Supervised Learning &
+Easy interpretation, handles nonlinear relationships, low preprocessing requirements &
+Prone to overfitting and instability with noisy datasets &
+Soil classification, irrigation decision support, land suitability assessment \\
+\midrule
+Random Forest (RF) &
+Ensemble Learning &
+High predictive accuracy, robust against overfitting, effective for high-dimensional datasets &
+Reduced interpretability and increased computational cost for large datasets &
+Digital soil mapping, soil moisture prediction, crop yield forecasting \\
+\midrule
+Support Vector Machines (SVM) &
+Supervised Learning &
+Strong generalization capability, effective with limited datasets, suitable for nonlinear modelling &
+Sensitive to parameter selection and kernel choice, computationally intensive for large datasets &
+Salinity prediction, irrigation scheduling, soil property estimation \\
+\midrule
+k-Nearest Neighbors (kNN) &
+Instance-Based Learning &
+Simple implementation, nonparametric nature, adaptable to local data patterns &
+Sensitive to noise and data scaling, computationally expensive for large datasets &
+Soil texture classification, local hydrological prediction \\
+\midrule
+Artificial Neural Networks (ANN) &
+Deep Learning &
+Excellent nonlinear modelling capability, adaptive learning, robust predictive performance &
+Requires large datasets and extensive training, limited interpretability &
+Hydraulic conductivity estimation, rainfall-runoff modelling, evapotranspiration forecasting \\
+\midrule
+Convolutional Neural Networks (CNN) &
+Deep Learning &
+Strong spatial feature extraction capability, highly effective for image analysis and remote sensing &
+High computational requirements and large data dependency &
+Remote sensing analysis, digital soil mapping, crop-water stress detection \\
+\midrule
+Recurrent Neural Networks (RNN) &
+Deep Learning &
+Efficient sequence and temporal dependency modelling &
+Gradient vanishing problems and limited long-term memory retention &
+Time-series soil moisture prediction, hydrological forecasting \\
+\midrule
+Long Short-Term Memory (LSTM) &
+Deep Learning &
+Excellent long-term temporal learning capability, effective for sequential environmental datasets &
+Computationally intensive and complex hyperparameter tuning &
+Soil moisture forecasting, rainfall prediction, irrigation demand estimation \\
+\midrule
+Gradient Boosting Machines (GBM) &
+Ensemble Learning &
+High predictive accuracy, efficient handling of heterogeneous datasets &
+Sensitive to parameter tuning and potential overfitting &
+Crop yield prediction, groundwater quality assessment \\
+\midrule
+Extreme Gradient Boosting (XGBoost) &
+Ensemble Learning &
+Fast training, high scalability, superior predictive performance &
+Complex optimization and reduced interpretability &
+Precision agriculture, smart irrigation systems, hydrological modelling \\
+\midrule
+Transformer Models &
+Deep Learning &
+Superior spatiotemporal learning capability, parallel processing efficiency, scalable architectures &
+Very high computational demand and large training data requirements &
+Climate-smart agriculture, large-scale hydrological forecasting, environmental analytics \\
+\bottomrule
+\end{longtable}
+
+%============= TABLE ==================================<
 
 In soil and water science applications, XGBoost and gradient boosting have demonstrated superior performance compared with RF and SVM in several benchmarking studies on soil hydraulic property prediction, irrigation demand forecasting, and soil nutrient mapping. Key advantages include the ability to handle missing predictor values natively, efficient implementation with parallel computation, and built-in regularisation terms that control model complexity. Gradient boosting methods are increasingly combined with SHAP (SHapley Additive exPlanations) values \citep{lundberg2017unified} to provide feature attribution scores that quantify the contribution of each input variable to individual predictions, substantially improving model interpretability without sacrificing predictive accuracy.
 
@@ -665,7 +782,6 @@ Artificial intelligence, machine learning, and distributed deep learning are tra
 
 \subsection*{Tables}
 \begin{itemize}
-\item Table 3. Comparison of machine learning algorithms in soil-water modelling.
 \item Table 4. Distributed AI frameworks and agricultural applications.
 \item Table 5. AI techniques for smart irrigation and water conservation.
 \item Table 6. Comparative performance of AI models in soil-water applications.
