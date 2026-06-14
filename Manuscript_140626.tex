@@ -452,13 +452,13 @@ Capillary Rise &
 Upward movement of water through soil pores due to capillary forces &
 Supports crop water availability in shallow groundwater regions and arid environments &
 Pore-size distribution, groundwater depth, soil texture &
-\citep{MDPIHydraul2025, Gardner1958, Liu2022} \\ \hline
+\citep{MDPIHydraul2025, Gardner1958, ALI2026, app13063374} \\ \hline
 
 Water Holding Capacity &
 Maximum amount of water retained by soil after saturation and drainage &
 Determines irrigation frequency, crop resilience, and water-use efficiency &
 Organic matter, texture, aggregation, compaction &
-\citep{Barik2020, Minasny2016, Hudson1994, Rawls2003} \\
+\citep{Barik2020, flint2018increasing, Hudson1994, Rawls2003} \\
 
 \end{longtable}
 \normalsize
@@ -506,7 +506,7 @@ Soil water redistribution following rainfall or irrigation events involves a suc
 
 \subsection{Soil Degradation and Water Stress}
 
-Soil degradation constitutes one of the most significant threats to the long-term sustainability of agricultural water use. Globally, it is estimated that more than one-third of agricultural land is moderately to severely degraded, with salinisation, erosion, compaction, and loss of soil organic carbon (SOC) representing the dominant degradation pathways \citep{glassensio2022global}. Each of these processes exerts distinct effects on soil--water dynamics and, consequently, on crop water availability and irrigation requirements.
+Soil degradation constitutes one of the most significant threats to the long-term sustainability of agricultural water use \cite{Safriel2007}. Globally, it is estimated that more than one-third of agricultural land is moderately to severely degraded, with salinisation, erosion, compaction, and loss of soil organic carbon (SOC) representing the dominant degradation pathways \citep{oldeman1992global}. Each of these processes exerts distinct effects on soil--water dynamics and, consequently, on crop water availability and irrigation requirements.
 
 Soil salinisation---arising from irrigation with saline water, seawater intrusion into coastal aquifers, or evaporative concentration of dissolved salts in poorly drained soils---reduces plant-available water by increasing osmotic stress and suppressing root water uptake. It has been estimated that salinity-affected soils account for approximately 20\% of irrigated agricultural land worldwide and that this proportion is increasing \citep{nachshon2018cropland}. Soil compaction, caused by heavy machinery traffic and tillage, reduces macroporosity and increases soil strength, thereby impeding root penetration, restricting drainage, and increasing surface runoff \citep{Lemenkova202222}. Erosion by water removes fertile topsoil and reduces the depth of the rooting zone, diminishing the soil's water storage capacity.
 
@@ -545,9 +545,9 @@ Hybrid model architectures, which integrate the process knowledge embedded in ph
 
 \subsection{Overview of AI Techniques and Conceptual Framework}
 
-Artificial intelligence encompasses a broad spectrum of computational approaches that enable machines to perform tasks that would conventionally require human expertise: pattern recognition, prediction, classification, optimisation, and adaptive decision-making. Within the context of soil and water sciences, AI methods can be broadly categorised into classical ML algorithms (which rely primarily on handcrafted feature engineering), deep learning architectures (which learn hierarchical feature representations directly from raw data), and hybrid or physics-guided models that integrate AI with domain knowledge \citep{jordan2015machine}. Each category offers distinct advantages and is suited to different problem types, data modalities, and application scales.
+Artificial intelligence encompasses a broad spectrum of computational approaches that enable machines to perform tasks that would conventionally require human expertise: pattern recognition, prediction, classification, optimisation, and adaptive decision-making \cite{Fan2018}. Within the context of soil and water sciences, AI methods can be broadly categorised into classical ML algorithms (which rely primarily on handcrafted feature engineering) \cite{Amani}, deep learning architectures (which learn hierarchical feature representations directly from raw data) \cite{Attri}, and hybrid or physics-guided models that integrate AI with domain knowledge \citep{jordan2015machine}. Each category offers distinct advantages and is suited to different problem types, data modalities, and application scales.
 
-A unifying characteristic of all AI approaches is their reliance on historical data for model training: the model parameters (weights, split thresholds, kernel coefficients, etc.) are adjusted to minimise a loss function measuring the discrepancy between model predictions and observed target variables. This data-driven paradigm contrasts with the a priori specification of process equations in physically-based models, and its predictive accuracy depends critically on the volume, quality, and representativeness of the training data. In domains such as soil science where training data may be sparse, geographically biased, or collected with heterogeneous measurement protocols, this dependence introduces significant challenges that have motivated the development of transfer learning, data augmentation, and physics-informed regularisation strategies.
+A unifying characteristic of all AI approaches is their reliance on historical data for model training: the model parameters (weights, split thresholds, kernel coefficients, etc.) are adjusted to minimise a loss function measuring the discrepancy between model predictions and observed target variables \citep{}. This data-driven paradigm contrasts with the a priori specification of process equations in physically-based models, and its predictive accuracy depends critically on the volume, quality, and representativeness of the training data for classification \cite{Tso2007}. In domains such as soil science where training data may be sparse, geographically biased, or collected with heterogeneous measurement protocols, this dependence introduces significant challenges that have motivated the development of transfer learning, data augmentation, and physics-informed regularisation strategies.
 
 The taxonomy of AI applications in soil and water sciences is increasingly sophisticated, Figure \ref{fig04}. At the input end, AI models ingest data from a diverse range of sources: ground-based sensors measuring soil moisture, electrical conductivity, temperature, and matric potential; meteorological stations providing precipitation, air temperature, humidity, wind speed, and solar radiation records; multispectral, hyperspectral, and synthetic aperture radar (SAR) satellite imagery; UAV-based RGB, multispectral, and thermal imagery; and agronomic records of crop variety, sowing date, fertiliser application, and yield. 
 
@@ -607,14 +607,14 @@ Supervised Learning &
 Simple implementation, computational efficiency, high interpretability &
 Limited ability to capture nonlinear relationships and complex interactions &
 Water balance estimation, evapotranspiration prediction, trend analysis &
-\citep{Montgomery2021, Allen1998, Tabari2011, Kisi2007} \\ \hline
+\citep{Montgomery2021, Allen1998, Gaoetal2017, Konukcu, SCOTT2021108251} \\ \hline
 
 Decision Trees &
 Supervised Learning &
 Easy interpretation, handles nonlinear relationships, low preprocessing requirements &
 Prone to overfitting and instability with noisy datasets &
 Soil classification, irrigation decision support, land suitability assessment &
-\citep{Quinlan1986, Safavian1991, Padarian2020, Tso2007} \\ \hline
+\citep{Quinlan1986, Safavian1991, Padarian2020} \\ \hline
 
 Random Forest (RF) &
 Ensemble Learning &
@@ -628,14 +628,14 @@ Supervised Learning &
 Strong generalization capability, effective with limited datasets, suitable for nonlinear modelling &
 Sensitive to parameter selection and kernel choice, computationally intensive for large datasets &
 Salinity prediction, irrigation scheduling, soil property estimation &
-\citep{Vapnik1995, Cortes1995, Gill2006, Asefa2006, Karandish2021} \\ \hline
+\citep{Vapnik1995, Gill2006, Asefa, Behzad, Karandish2016} \\ \hline
 
 k-Nearest Neighbors (kNN) &
 Instance-Based Learning &
 Simple implementation, nonparametric nature, adaptable to local data patterns &
 Sensitive to noise and data scaling, computationally expensive for large datasets &
 Soil texture classification, local hydrological prediction &
-\citep{Cover1967, Altman1992, Nematollahi2020, Elshorbagy2010, Fix1989} \\ \hline
+\citep{Cover1967, Altman1992, VELOSO2022e00569, Elshorbagy2010, Fix1989} \\ \hline
 
 Artificial Neural Networks (ANN) &
 Deep Learning &
@@ -649,42 +649,42 @@ Deep Learning &
 Strong spatial feature extraction capability, highly effective for image analysis and remote sensing &
 High computational requirements and large data dependency &
 Remote sensing analysis, digital soil mapping, crop-water stress detection &
-\citep{LeCun2015, Padarian2019, Zhang2018_CNN, Krizhevsky2012, Ng2019} \\ \hline
+\citep{LeCun2015, Padarian2019, ai5020033, Krizhevsky2017, Ng2019} \\ \hline
 
 Recurrent Neural Networks (RNN) &
 Deep Learning &
 Efficient sequence and temporal dependency modelling &
 Gradient vanishing problems and limited long-term memory retention &
 Time-series soil moisture prediction, hydrological forecasting &
-\citep{Jordan1986, Elman1990, Coulibaly2001, Chiang2004, Medsker2001} \\ \hline
+\citep{Jordan1986, Elman1990, Coulibaly2001, hydrology12080207, Medsker2001} \\ \hline
 
 Long Short-Term Memory (LSTM) &
 Deep Learning &
 Excellent long-term temporal learning capability, effective for sequential environmental datasets &
 Computationally intensive and complex hyperparameter tuning &
 Soil moisture forecasting, rainfall prediction, irrigation demand estimation &
-\citep{Hochreiter1997, Kratzert2018, Fang2017, Zhang2019_LSTM, Babaeian2021} \\ \hline
+\citep{Hochreiter1997, Kratzert2018, Fang2017, Zhang2019_LSTM, Aetal} \\ \hline
 
 Gradient Boosting Machines (GBM) &
 Ensemble Learning &
 High predictive accuracy, efficient handling of heterogeneous datasets &
 Sensitive to parameter tuning and potential overfitting &
 Crop yield prediction, groundwater quality assessment &
-\citep{Friedman2001, Natekin2013, Elith2008, Persson2024, Parsa2021} \\ \hline
+\citep{Subudhi, Friedman2001, Natekin2013, Elith2008} \\ \hline
 
 Extreme Gradient Boosting (XGBoost) &
 Ensemble Learning &
 Fast training, high scalability, superior predictive performance &
 Complex optimization and reduced interpretability &
 Precision agriculture, smart irrigation systems, hydrological modelling &
-\citep{Chen2016, Fan2018, Zamani2024, Zhang2025_XGB} \\ \hline
+\citep{Chen2016, rs17132129, Ghiat, Benassi} \\ \hline
 
 Transformer Models &
 Deep Learning &
 Superior spatiotemporal learning capability, parallel processing efficiency, scalable architectures &
 Very high computational demand and large training data requirements &
 Climate-smart agriculture, large-scale hydrological forecasting, environmental analytics &
-\citep{Vaswani2017, Devlin2018, Wu2021_Trans, Wang2025_Trans} \\
+\citep{Vaswani2017, Devlin2018, Wu2021_Trans, Nguyen} \\
 
 \end{longtable}
 \normalsize
