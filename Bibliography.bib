@@ -423,7 +423,49 @@ author = {Mariana Faria Veloso and Lineu Neiva Rodrigues and Elpídio Inácio Fe
 	title = {Neural networks for the prediction and forecasting of water resources variables: a review of modelling issues and applications},
 	volume = {15},
 	doi = {10.1016/S1364-8152(99)00007-9},
-	year = {2000}}
+	year = {2000}
+}
+
+@article{Alsumaiei70551,
+author = {Alsumaiei, Abdullah A.},
+title = {Water Balance Regularised Modelling of Multi-Depth Soil Moisture Dynamics in Arid Hydrological Systems},
+journal = {Hydrological Processes},
+volume = {40},
+number = {5},
+pages = {e70551},
+keywords = {hydrologic modelling, irrigation water supply, physics-constrained neural networks, soil moisture forecasting, water balance regularisation},
+doi = {https://doi.org/10.1002/hyp.70551},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.70551},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/hyp.70551},
+note = {e70551 HYP-26-0081},
+abstract = {ABSTRACT Accurate and physically consistent soil moisture forecasting is essential for irrigation water supply, yet purely data-driven models may generalise poorly and exhibit nonphysical behaviour under changing forcing and management conditions. This study develops a water balance regularised neural network for daily multi-depth soil moisture forecasting and evaluates its performance across three agricultural monitoring stations in Kuwait (Rabyah, Sulibyah and Wafra) and three depths (10, 20 and 50 cm). The model predicts one-day-ahead soil moisture increments using rainfall, pan evaporation, and lagged soil moisture, while a soft water balance regularisation constrains storage changes through learnable balance and drainage coefficients. Performance is benchmarked against an unconstrained neural network using RMSE, MAE, R2, and Kling–Gupta efficiency metric, and further assessed through time series agreement, residual diagnostics, split-based generalisation, paired comparisons, and bootstrap uncertainty analysis. The constrained model outperforms the unconstrained network in 6 of 9 station–depth cases for RMSE and 5 of 9 cases for MAE, with the most consistent gains observed at 50 cm depth, reflecting storage-dominated dynamics. Bootstrap analysis indicates positive mean improvements of 4.73\% in RMSE and 5.68\% in MAE, although confidence intervals include zero, indicating heterogeneous benefits across regimes. A conceptual partial root zone drying application demonstrates how physically interpretable soil moisture forecasts can support threshold-based irrigation control. Overall, the results indicate that water balance regularisation enhances the stability and interpretability of neural network based soil moisture forecasts for irrigation water supply.},
+year = {2026}
+}
+
+@article{Wang2023WR035194,
+author = {Wang, Yi and Wang, Wenke and Ma, Zhitong and Zhao, Ming and Li, Wanxin and Hou, Xinyue and Li, Jie and Ye, Fei and Ma, Wenjing},
+title = {A Deep Learning Approach Based on Physical Constraints for Predicting Soil Moisture in Unsaturated Zones},
+journal = {Water Resources Research},
+volume = {59},
+number = {11},
+pages = {e2023WR035194},
+keywords = {unsaturated zone, hydrological simulation, soil moisture, neural network, machine learning},
+doi = {https://doi.org/10.1029/2023WR035194},
+url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023WR035194},
+eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2023WR035194},
+note = {e2023WR035194 2023WR035194},
+abstract = {Abstract Water transport in the unsaturated zone is an important part of the hydrological cycle and is the link between the atmosphere‒soil-groundwater for material and energy transport. The accurate prediction of soil moisture (SM) is essential for the rational exploitation of water resources. Data-driven deep learning methods are widely used in many fields; however, the lack of physical mechanisms limits their application in hydrological fields, especially for SM prediction in unsaturated zones. To solve this problem, this study proposes a new deep learning method that introduces the water balance principle, Richard's equation, and SM boundary conditions as constraints to construct the new loss function that guides the training process of deep learning, called physics-informed deep learning (PIDL). In tests consisting of a large number of data sets acquired from in situ observation sites in the field, PIDL exhibits higher accuracy than ordinary deep learning (long short-term memory) and physical models, with 51.03\% and 53.46\% reduction in root mean square error of SM prediction, respectively. PIDL performance significantly improved in predicting scenarios that are difficult for ordinary deep learning to handle, such as sparse data sets, extreme values, and mutated values. In addition, PIDL maintains high accuracy over a longer prediction period. The addition of physical mechanisms allows deep learning to mine patterns not only from the data itself but also from a priori physical theoretical knowledge for guidance, and this hybrid modeling approach can also be generalized to prediction problems in other hydrological domains.},
+year = {2023}
+}
+@article{ghorbani2021physics,
+  author  = {Ghorbani, Amirreza and Sadeghi, Morteza and Jones, Scott B.},
+  title   = {Towards New Soil Water Flow Equations Using Physics-Constrained Machine Learning},
+  journal = {Vadose Zone Journal},
+  year    = {2021},
+  volume  = {20},
+  pages   = {e20136},
+  doi     = {10.1002/vzj2.20136}
+}
 
 
 @article{Govindaraju2000,
@@ -939,15 +981,6 @@ pages = {84–90}
 	doi = {10.1007/s10791-026-10021-3},
 	year = {2026}}
 
-@article{Arrieta2020,
-  author  = {Arrieta, Alejandro Barredo and D{\'i}az-Rodr{\'i}guez, Natalia and Del Ser, Javier and Bennetot, Adrien and Tabik, Siham and and Herrera, Francisco},
-  title   = {Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI},
-  journal = {Information Fusion},
-  year    = {2020},
-  volume  = {58},
-  pages   = {82--115},
-  doi     = {10.1016/j.inffus.2019.11.002}
-}
 
 @article{Sit2020,
   author  = {Sit, Muhammed and Demiray, Bekir Z. and Xiang, Zhongrun and
@@ -2277,128 +2310,17 @@ year = {2013}
 % ADDITIONAL SUPPORTING REFERENCES (recommended for paper completeness)
 % ----------------------------------------------------------
 
-@article{shen2018transdisciplinary,
-  author    = {Shen, Chaopeng},
-  title     = {A Transdisciplinary Review of Deep Learning Research and Its Relevance for Water Resources Scientists},
-  journal   = {Water Resources Research},
-  year      = {2018},
-  volume    = {54},
-  number    = {11},
-  pages     = {8558--8593},
-  doi       = {10.1029/2018WR022643}
-}
 
-@article{beven1979physically,
-  author    = {Beven, Keith and Kirkby, Mike J.},
-  title     = {A Physically Based, Variable Contributing Area Model of Basin Hydrology},
-  journal   = {Hydrological Sciences Bulletin},
-  year      = {1979},
-  volume    = {24},
-  number    = {1},
-  pages     = {43--69},
-  doi       = {10.1080/02626667909491834}
-}
 
-@article{chaney2016hydroblocks,
-  author    = {Chaney, Nathaniel W. and Metcalfe, Patrick and Wood, Eric F.},
-  title     = {{HydroBlocks}: A Field-Scale Resolving Land Surface Model for Application Over Continental Extents},
-  journal   = {Hydrological Processes},
-  year      = {2016},
-  volume    = {30},
-  number    = {20},
-  pages     = {3543--3559},
-  doi       = {10.1002/hyp.10891}
-}
 
-@article{ines2013bias,
-  author    = {Ines, Amor V. M. and Hansen, James W.},
-  title     = {Bias Correction of Daily {GCM} Rainfall for Crop Simulation Studies},
-  journal   = {Agricultural and Forest Meteorology},
-  year      = {2006},
-  volume    = {138},
-  number    = {1--4},
-  pages     = {44--53},
-  doi       = {10.1016/j.agrformet.2006.03.009}
-}
 
-@article{camps2021deep,
-  author    = {Camps-Valls, Gustau and Tuia, Devis and Zhu, Xiao Xiang and Reichstein, Markus},
-  title     = {Deep Learning for the Earth Sciences: A Comprehensive Approach to Remote Sensing, Climate Science and Geosciences},
-  journal   = {Wiley-Blackwell},
-  year      = {2021},
-  doi       = {10.1002/9781119646181}
-}
 
-@article{minasny2017soil,
-  author    = {Minasny, Budiman and Malone, Brendan P. and McBratney, Alex B. and Angers, Denis A. and Arrouays, Dominique and Chambers, Adam and Chaplot, Vincent and Chen, Zueng-Sang and Cheng, Kun and Das, Bhabani S. and Field, Damien J. and Gimona, Alessandro and Hedley, Carolyn B. and Hong, Suk Young and Mandal, Biswapati and Marchant, Ben P. and Martin, Manuel and McConkey, Brian G. and Mulder, Vera L. and O'Rourke, Sharon and Richer-de-Forges, Anne C. and Odeh, Inakwu and Padarian, José and Paustian, Keith and Pan, Genxing and Poggio, Laura and Savin, Igor and Stolbovoy, Vladimir and Stockmann, Uta and Sulaeman, Yiyi and Tsui, Chuen-Chi and Vågen, Tor-Gunnar and van Wesemael, Bas and Winowiecki, Leigh},
-  title     = {Soil Carbon 4 Per Mille},
-  journal   = {Geoderma},
-  year      = {2017},
-  volume    = {292},
-  pages     = {59--86},
-  doi       = {10.1016/j.geoderma.2017.01.002}
-}
 
-@article{taghizadeh2020machine,
-  author    = {Taghizadeh-Mehrjardi, Ruhollah and Nabiollahi, Kamal and Rasoli, Leila and Kerry, Ruth and Scholten, Thomas},
-  title     = {Land Suitability Assessment and Agricultural Production Sustainability Using Machine Learning Models},
-  journal   = {Agronomy},
-  year      = {2020},
-  volume    = {10},
-  number    = {4},
-  pages     = {573},
-  doi       = {10.3390/agronomy10040573}
-}
 
-@article{sehgal2016effect,
-  author    = {Sehgal, Dhaval and Jain, Vijay and Vadez, Vincent and Sinha, Subhash},
-  title     = {Dissection of Genetic Factors Underlying Crop Tolerance to Soil Waterlogging and Flooding Stress},
-  journal   = {Crop Science},
-  year      = {2016},
-  volume    = {56},
-  number    = {4},
-  pages     = {1542--1559},
-  doi       = {10.2135/cropsci2015.09.0546}
-}
 
-@article{diaz2022federated,
-  author    = {Díaz-Rodríguez, Natalia and Wenzel, Florian and Herber, Sascha and Atzberger, Clement and Rienecker, Michael and Vens, Celine},
-  title     = {Federated Learning for Smart Farming: A Survey},
-  journal   = {Computers and Electronics in Agriculture},
-  year      = {2022},
-  volume    = {202},
-  pages     = {107423},
-  doi       = {10.1016/j.compag.2022.107423}
-}
 
-@article{song2021survey,
-  author    = {Song, Lin and Liu, Xuejing and Zliobaite, Indre and Bifet, Albert},
-  title     = {A Survey of Algorithms for Distributed Machine Learning},
-  journal   = {IEEE Transactions on Knowledge and Data Engineering},
-  year      = {2021},
-  volume    = {34},
-  number    = {12},
-  pages     = {5695--5713},
-  doi       = {10.1109/TKDE.2021.3051428}
-}
 
-@article{simonyan2015vgg,
-  author    = {Simonyan, Karen and Zisserman, Andrew},
-  title     = {Very Deep Convolutional Networks for Large-Scale Image Recognition},
-  journal   = {International Conference on Learning Representations},
-  year      = {2015},
-  url       = {https://arxiv.org/abs/1409.1556}
-}
 
-@article{yang2021review,
-  author    = {Yang, Liuming and Shami, Abdallah},
-  title     = {On Hyperparameter Optimization of Machine Learning Algorithms: Theory and Practice},
-  journal   = {Neurocomputing},
-  year      = {2020},
-  volume    = {415},
-  pages     = {295--316},
-  doi       = {10.1016/j.neucom.2020.07.061}
-}
 
 @article{padarian2019using,
   author    = {Padarian, José and Minasny, Budiman and McBratney, Alex B.},
@@ -2411,49 +2333,9 @@ year = {2013}
   doi       = {10.5194/soil-5-79-2019}
 }
 
-@article{bai2019global,
-  author    = {Bai, Zhong-Guo and Dent, David L. and Olsson, Lennart and Schaepman, Michael E.},
-  title     = {Proxy Global Assessment of Land Degradation},
-  journal   = {Soil Use and Management},
-  year      = {2008},
-  volume    = {24},
-  number    = {3},
-  pages     = {223--234},
-  doi       = {10.1111/j.1475-2743.2008.00169.x}
-}
 
-@article{rumelhart1986learning,
-  author    = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
-  title     = {Learning Representations by Back-Propagating Errors},
-  journal   = {Nature},
-  year      = {1986},
-  volume    = {323},
-  number    = {6088},
-  pages     = {533--536},
-  doi       = {10.1038/323533a0}
-}
 
-@article{lobell2010remote,
-  author    = {Lobell, David B. and Asner, Gregory P.},
-  title     = {Cropland Distributions from Temporal Unmixing of {MODIS} Data},
-  journal   = {Remote Sensing of Environment},
-  year      = {2004},
-  volume    = {93},
-  number    = {3},
-  pages     = {412--422},
-  doi       = {10.1016/j.rse.2004.08.002}
-}
 
-@article{srivastava2014dropout,
-  author    = {Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
-  title     = {Dropout: A Simple Way to Prevent Neural Networks from Overfitting},
-  journal   = {Journal of Machine Learning Research},
-  year      = {2014},
-  volume    = {15},
-  number    = {1},
-  pages     = {1929--1958},
-  url       = {https://jmlr.org/papers/v15/srivastava14a.html}
-}
 
 @article{Datta,
 	author = {Datta, Pingki and Faroughi, Salah A.},
@@ -2814,125 +2696,15 @@ year = {2013}
   doi       = {10.3390/w13010028}
 }
 
-@article{chen2023federated,
-  author    = {Chen, Yiqiang and Qin, Xin and Wang, Jin and Yu, Chaohui and Gao, Weiwei},
-  title     = {Federated Meta-Learning with Fast Convergence and Efficient Communication},
-  journal   = {IEEE Transactions on Neural Networks and Learning Systems},
-  year      = {2023},
-  volume    = {34},
-  number    = {7},
-  pages     = {3517--3529},
-  doi       = {10.1109/TNNLS.2021.3098814}
-}
 
-@article{xu2023soil,
-  author    = {Xu, Yingyi and Peng, Jian and Lobell, David B. and Iizumi, Toshichika and Li, Yue and Chen, Jun},
-  title     = {Soil Moisture Retrieval from Sentinel-1 Time Series Using a Deep Learning Approach Combined with Crop Growth Modelling},
-  journal   = {Remote Sensing of Environment},
-  year      = {2023},
-  volume    = {290},
-  pages     = {113530},
-  doi       = {10.1016/j.rse.2023.113530}
-}
 
-@article{sun2022spatial,
-  author    = {Sun, Zehua and Di, Liping and Fang, Hongyuan},
-  title     = {Using Long Short-Term Memory Recurrent Neural Network in Land Cover Change Detection},
-  journal   = {ISPRS Journal of Photogrammetry and Remote Sensing},
-  year      = {2022},
-  volume    = {186},
-  pages     = {105--128},
-  doi       = {10.1016/j.isprsjprs.2022.02.007}
-}
 
-@article{qin2023uncertainty,
-  author    = {Qin, Cheng-Zhi and Zhu, A-Xing and Shi, Xun and Li, Baolin and Pei, Tao and Zhou, Chenghu},
-  title     = {Quantification of Spatial Gradation of Slope Positions from {DEM}-Derived Variables},
-  journal   = {Geomorphology},
-  year      = {2009},
-  volume    = {110},
-  number    = {3--4},
-  pages     = {152--161},
-  doi       = {10.1016/j.geomorph.2009.04.003}
-}
 
-@article{reichle2022smap,
-  author    = {Reichle, Rolf H. and Liu, Qing and Koster, Randal D. and Crow, Wade T. and De Lannoy, Gabrielle J. M. and Kimball, John S. and Ardizzone, Joseph V. and Bosch, David and Colliander, Andreas and Cosh, Michael and others},
-  title     = {Version 5 of the {SMAP} Level-4 Soil Moisture Algorithm and Data Product},
-  journal   = {Journal of Advances in Modeling Earth Systems},
-  year      = {2019},
-  volume    = {11},
-  number    = {10},
-  pages     = {3106--3130},
-  doi       = {10.1029/2019MS001729}
-}
 
-@article{wang2022digital,
-  author    = {Wang, Shuai and Guan, Kaiyu and Zhang, Chenhui and Lee, Daran and Margenot, Andrew J. and Ge, Yufeng and Peng, Jian and Zhou, Wang and Zhou, Qunying and Huang, Yanghui},
-  title     = {Using Soil Library Hyperspectral Data and Machine Learning to Predict Soil Organic Carbon: Assessing Potential of Airborne and Spaceborne Optical Soil Sensing},
-  journal   = {Remote Sensing of Environment},
-  year      = {2022},
-  volume    = {271},
-  pages     = {112914},
-  doi       = {10.1016/j.rse.2022.112914}
-}
 
-@article{jin2023fairness,
-  author    = {Jin, Weina and Fatehi, Parnian and Blackburn, Kaley and Hamarneh, Ghassan},
-  title     = {Guidelines and Evaluation of Clinical Explainable {AI} in Medical Image Analysis},
-  journal   = {Medical Image Analysis},
-  year      = {2023},
-  volume    = {84},
-  pages     = {102684},
-  doi       = {10.1016/j.media.2022.102684}
-}
 
-@article{tuia2023toward,
-  author    = {Tuia, Devis and Kellenberger, Benjamin and Beery, Sara and Costelloe, Blair R. and Zuffi, Silvia and Risse, Benjamin and Mathis, Alexander and Mathis, Mackenzie W. and van Langevelde, Frank and Burghardt, Tilo and others},
-  title     = {Perspectives in Machine Learning for Wildlife Conservation},
-  journal   = {Nature Communications},
-  year      = {2022},
-  volume    = {13},
-  pages     = {792},
-  doi       = {10.1038/s41467-022-27980-y}
-}
 
-@article{lacoste2022toward,
-  author    = {Lacoste, Alexandre and Luccioni, Alexandra and Schmidt, Victor and Dandres, Thomas},
-  title     = {Quantifying the Carbon Emissions of Machine Learning},
-  journal   = {arXiv preprint arXiv:1910.09700},
-  year      = {2019},
-  url       = {https://arxiv.org/abs/1910.09700}
-}
 
-@article{bauer2023digital,
-  author    = {Bauer, Peter and Dueben, Peter D. and Hoefler, Torsten and Quintino, Tiago and Schulthess, Thomas C. and Wedi, Nils P.},
-  title     = {The Digital Revolution of Earth-System Science},
-  journal   = {Nature Computational Science},
-  year      = {2021},
-  volume    = {1},
-  number    = {2},
-  pages     = {104--113},
-  doi       = {10.1038/s43588-021-00023-0}
-}
 
-@article{vanklompenburg2020,
-  author    = {van Klompenburg, Thomas and Kassahun, Ayalew and Peng, Caifeng},
-  title     = {Crop Yield Prediction Using Machine Learning: A Systematic Literature Review},
-  journal   = {Computers and Electronics in Agriculture},
-  year      = {2020},
-  volume    = {177},
-  pages     = {105709},
-  doi       = {10.1016/j.compag.2020.105709}
-}
 
-@article{castelvecchi2022black,
-  author    = {Castelvecchi, Davide},
-  title     = {Can We Open the Black Box of {AI}?},
-  journal   = {Nature},
-  year      = {2016},
-  volume    = {538},
-  pages     = {20--23},
-  doi       = {10.1038/538020a}
-}
 
