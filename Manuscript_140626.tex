@@ -357,7 +357,26 @@ This review addresses these gaps by providing a structured synthesis of recent d
 
 The overarching aim is to provide researchers, practitioners, and policymakers with an integrated perspective on the current state of the art and the most promising directions for future research and development.
 
-\textcolor{blue}{The remainder of this manuscript is organised as follows. Section~2 establishes the physical and hydraulic fundamentals of soil--water systems, covering water retention theory, unsaturated flow governed by the Richards equation, and the principal soil degradation processes relevant to agricultural water management. Section~3 surveys the AI and deep learning methodologies applicable to soil science and agricultural water management, including classical ML algorithms, deep learning architectures, and physics-informed hybrid models. Section~4 reviews the data sources underpinning AI-based soil--water modelling, encompassing ground-based sensor networks, satellite and UAV remote sensing platforms, and data fusion challenges. Section~5 presents applications of AI in soil--water interactions, covering soil moisture prediction, smart irrigation, digital soil mapping, pedotransfer functions, and crop yield forecasting. Section~6 provides a comparative analysis of model performance and discusses generalisation and transferability across environments. Section~7 addresses explainability, uncertainty quantification, and the ethical and socioeconomic dimensions of AI deployment in precision agriculture. Section~8 critically examines current challenges and limitations, and Section~9 delineates prospective research directions and technical horizons. Section~10 presents the conclusions.}
+\textcolor{blue}{This manuscript is organised as follows. 
+\begin{enumerate}[label=(\roman*)]
+\item Section~1 is the introductory part of the manuscript.
+\item Section~2 establishes the physical and hydraulic fundamentals of soil--water systems, covering water retention theory, unsaturated flow governed by the Richards equation, and the principal soil degradation processes relevant to agricultural water management. 
+\item Section~3 surveys the AI and deep learning methodologies applicable to soil science and agricultural water management, including classical ML algorithms, deep learning architectures, and physics-informed hybrid models. 
+\item Section~4 reviews the data sources underpinning AI-based soil--water modelling, encompassing ground-based sensor networks, satellite and UAV remote sensing platforms, and data fusion challenges. \item Section~5 presents applications of AI in soil--water interactions, covering soil moisture prediction, smart irrigation, digital soil mapping, pedotransfer functions, and crop yield forecasting. 
+\item Section~6 provides a comparative analysis of model performance and discusses generalisation and transferability across environments. 
+\item Section~7 addresses explainability, uncertainty quantification, and the ethical and socioeconomic dimensions of AI deployment in precision agriculture. 
+\item Section~8 critically examines current challenges and limitations.
+\item Section~9 delineates prospective research directions and technical horizons. 
+\item Section~10 presents the conclusions.
+\end{enumerate}}
+
+\subsection{\textcolor{blue}{Review Methodology}}
+
+\textcolor{blue}{This article constitutes a comprehensive narrative review rather than a systematic review or meta-analysis; accordingly, the literature corpus was assembled through purposive expert-guided searching rather than a formally registered protocol with exhaustive database harvesting. The primary literature search was conducted across five major peer-reviewed publication platforms and indexing databases: ScienceDirect (Elsevier), Wiley Online Library, Taylor \& Francis Online, MDPI Open Access Journals, and the Scopus and Web of Science (WoS) citation indices}. 
+
+\textcolor{blue}{Search queries combined domain-specific thematic terms---``soil moisture'', ``soil hydraulic properties'', ``vadose zone'', ``pedotransfer functions'', ``irrigation scheduling'', ``precision agriculture'', ``digital soil mapping''---with methodological terms spanning ``machine learning'', ``deep learning'', ``convolutional neural network'', ``long short-term memory'', ``transformer'', ``federated learning'', ``physics-informed neural network'', ``explainable AI'', and ``uncertainty quantification''. The temporal scope of the search covered the period from 2000 to May 2026, with priority assigned to publications from 2015 onwards reflecting the emergence of modern deep learning methods; seminal pre-2015 works establishing theoretical foundations (e.g., Richards equation, van~Genuchten model, HYDRUS, MODFLOW) were included irrespective of date}. 
+
+\textcolor{blue}{Inclusion criteria required that sources: (i) were published in peer-reviewed journals or peer-reviewed conference proceedings; (ii) addressed at least one of the four thematic domains defined in the review objectives; and (iii) were available in English. Grey literature, preprints, and non-peer-reviewed reports were excluded unless they represented unique technical documentation (e.g., USGS technical manuals, FAO reports) with no peer-reviewed equivalent. Screened papers were grouped thematically into the section structure of the review: physical and hydraulic fundamentals, AI and deep learning methodologies, data sources, applications, model performance, explainability and ethics, challenges, and future directions. The final reference corpus comprises 250 sources.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTION 2: FUNDAMENTALS
@@ -982,7 +1001,7 @@ Integrated soil--water IoT systems typically combine capacitance or time-domain 
 
 \section{\textcolor{blue}{Data Sources for AI-Based Soil--Water Modelling}}
 
-The performance of any AI or deep learning model
+\textcolor{blue}{The performance of any AI or deep learning model is fundamentally bounded by the quality, volume, and spatial and temporal representativeness of its training data. In soil--water science, this dependency is particularly consequential because target variables---soil moisture content, hydraulic conductivity, solute concentration, evapotranspiration---are inherently continuous in space and time yet are sampled at discrete, often sparse locations and intervals. Bridging this observational gap requires the integration of data streams from a diverse ensemble of sensing technologies, each with characteristic spatial and temporal resolution, measurement uncertainty, and cost profile. The principal data sources reviewed in this section were identified through the literature search described in Section~1.3, with inclusion prioritising studies reporting quantitative validation of AI models against independently collected field or satellite observations.}
 
 % ----------------------------------------------------------
 \subsection{Ground-Based Sensor Networks}
