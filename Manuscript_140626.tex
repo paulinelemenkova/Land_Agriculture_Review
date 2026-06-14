@@ -147,7 +147,7 @@ The challenge of sustainable water management in agriculture is compounded by th
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_01.png}
     \end{center}
-    \caption{Global overview of water scarcity and agricultural water demand under climate change scenarios. Diagram source: author.}
+    \caption{Global overview of water scarcity and agricultural water demand under climate change scenarios. \textcolor{blue}{Software used: QGIS v. 3.44 for mapping; R v. 4.6.1 and ggplot2 package v. 4.0.3 for plotting bar charts and pie charts. Inkscape, v. 1.4.4 for dashboard styling and assembling. Dashboard} source: author.}
     \label{fig01}
 \end{figure}
 
@@ -476,7 +476,7 @@ Soil texture---the relative proportions of sand, silt, and clay fractions---exer
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_02.png}
     \end{center}
-    \caption{Conceptual diagram scheme of soil--water interaction processes in agricultural systems. Diagram source: author.}
+    \caption{Conceptual diagram scheme of soil--water interaction processes in agricultural systems. \textcolor{blue}{Software: Inkscape v. 1.4.4 for vector elements, GIMP, v. 3.2.4 for raster elements; OpenClipart (openclipart.org) for free SVG clipart of plants, clouds, sun. Infographic} source: author.}
     \label{fig02}
 \end{figure}
 
@@ -526,7 +526,7 @@ Nevertheless, physically-based models are subject to several important limitatio
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_03.png}
     \end{center}
-    \caption{Comparison between physics-based and AI-based soil-water modelling frameworks. Diagram source: author.}
+    \caption{Comparison between physics-based and AI-based soil-water modelling frameworks. \textcolor{blue}{Software used: \LaTeX \space for equations and TexText plugin -- for rendering \LaTeX \space equations; Inkscape v. 1.4.4 for plotting vector elements; TikZ package in \LaTeX \space for plotting neural network diagram (panel B); Material Design Icons for free icons and symbols. Flowchart} source: author.}
     \label{fig03}
 \end{figure}
 
@@ -559,7 +559,7 @@ The taxonomy of AI applications in soil and water sciences is increasingly sophi
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_04.png}
     \end{center}
-    \caption{Taxonomy of AI methods applied in soil-water and agricultural systems. Diagram source: author.}
+    \caption{Taxonomy of AI methods applied in soil-water and agricultural systems. \textcolor{blue}{Software used: Inkscape v. 1.4.4 for vector elements; GIMP v. 3.2.4 for raster elements and gradient fill; Vecteezy free tier for schematic icons. Flowchart} source: author.}
     \label{fig04}
 \end{figure}
 
@@ -787,7 +787,7 @@ Convolutional Neural Networks (CNNs) are the dominant deep learning architecture
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_05.png}
     \end{center}
-    \caption{Deep learning architectures for spatiotemporal soil moisture prediction. Diagram source: author.}
+    \caption{Deep learning architectures for spatiotemporal soil moisture prediction. \textcolor{blue}{Software used: Python's Matplotlib library ($mpl\_toolkits.mplot3d$ toolkit for 3D plotting; draw.io (diagrams.net) for plotting LSTM chain diagram. Node-edge graphs with coloured nodes were plotted using Python, NetworkX and Matplotlib. Mathematical notations were rendered in \LaTeX . Final assembly of three panels in layout: Inkscape v. 1.4.4. Flowchart} source: author.}
     \label{fig05}
 \end{figure}
 
@@ -910,7 +910,7 @@ Training large deep learning models on agricultural datasets of realistic scale-
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_06.png}
     \end{center}
-    \caption{Architecture of distributed deep learning and federated learning in smart agriculture. Diagram source: author.}
+    \caption{Architecture of distributed deep learning and federated learning in smart agriculture. \textcolor{blue}{Software used: draw.io built-in Network library for plotting server racks (data centre pics); OpenClipart for icons (UAV/drone, weather station, soil sensor, tractor, market); Noun Project free tier for plotting icons of Smart Agriculture Application panel. Assembly: Inkscape v. 1.4.4. Flowchart} source: author.}
     \label{fig06}
 \end{figure}
 
@@ -965,94 +965,15 @@ The deployment of AI inference at the network edge---on IoT devices, field-deplo
 
 Integrated soil--water IoT systems typically combine capacitance or time-domain reflectometry (TDR) soil moisture sensors, temperature and rainfall probes, and plant water status sensors (dendrometers, stem psychrometers) with edge AI processors running lightweight LSTM or transformer models fine-tuned for the specific farm and soil context. These systems close the feedback loop between sensing and actuation, enabling precision variable-rate irrigation that responds to real-time soil moisture dynamics at sub-field resolution.
 
-\subsection{Applications: From Soil Moisture Prediction to Digital Soil Mapping}
-
-\subsubsection{Soil Moisture Prediction and Forecasting}
-
-Soil moisture is arguably the single most important variable for operational irrigation management: it directly quantifies plant-available water in the root zone and provides the primary input to deficit-based irrigation scheduling algorithms \cite{Araya}. AI-based soil moisture prediction models have been developed across a hierarchy of spatial scales, from point-scale models trained on individual sensor station records to regional-scale models assimilating satellite passive microwave retrievals.
-
-At the field scale, LSTM and hybrid CNN--LSTM models have achieved root mean square errors (RMSE) of 0.02--0.04~m$^3$~m$^{-3}$ in cross-validated evaluations on multi-year soil moisture time series from diverse agricultural sites, competitive with or superior to HYDRUS-based physically-based simulations. At the catchment and regional scales, ML models have been used to downscale coarse-resolution SMAP satellite soil moisture products (36~km footprint) to field-scale resolutions (tens of metres) by incorporating high-resolution optical and SAR imagery, terrain, and soil map data as auxiliary predictors \citep{fang2019deep}.
-
-\subsubsection{Smart Irrigation and Water Use Optimisation}
-
-Reinforcement learning (RL) provides a natural framework for optimising irrigation scheduling decisions, in which an agent (the irrigation controller) takes actions (irrigation application amounts) in an environment (the crop--soil--atmosphere system) to maximise a cumulative reward signal encoding crop yield and water productivity \citep{agronomy15102416}. RL-based irrigation controllers, trained in simulation using calibrated crop growth models as environment simulators and then fine-tuned on real field data, improve water savings of 20--35\% relative to calendar-based irrigation schedules without yield penalty in controlled experiments on vegetable and grain crops.
+\textcolor{blue}{The algorithmic families described in the preceding subsections---classical ML, deep learning, and physics-informed hybrid architectures---underpin a broad spectrum of soil--water applications that are treated in detail in Section~5. These include point-to-regional-scale soil moisture prediction (Section~5.1), AI-driven smart irrigation scheduling and water use optimisation (Section~5.2), estimation of soil hydraulic properties through deep learning pedotransfer functions (Section~5.3), digital soil mapping and spatial land-use analytics (Section~5.4), crop yield prediction and precision agriculture (Section~5.5), and climate change adaptation (Section~5.6). An illustrative overview of the AI workflow for smart irrigation and water management is provided in Figure~\ref{fig07}.}
 
 \begin{figure}[H]
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_07.png}
     \end{center}
-    \caption{AI workflow for smart irrigation and water management systems. Diagram source: author.}
+    \caption{\textcolor{blue}{Conceptual system architecture diagram of} AI workflow for smart irrigation and water management systems. \textcolor{blue}{Software and tools used: GIMP, v. 3.2.4; Phosphor Icons for Circular icon at top (Agri-Planner / Farm Manager); draw.io container shape for plotting panels; Inkscape v. 1.4.4 for circular engine icons and assembling the layout}. Diagram source: author.}
     \label{fig07}
 \end{figure}
-
-Deep Q-networks (DQN) and actor-critic algorithms (Proximal Policy Optimisation, Soft Actor-Critic) have been applied to multi-variable irrigation optimisation problems that simultaneously consider soil moisture, crop growth stage, weather forecast uncertainty, and economic constraints. Integrating these RL frameworks with real-time IoT sensor networks and probabilistic weather forecasting represents a compelling direction for practical precision irrigation systems.
-
-\subsubsection{Digital Soil Mapping and Spatial Analytics}
-
-Digital soil mapping (DSM) uses AI-based models to predict the spatial distribution of soil properties across unsurveyed areas from environmental covariate layers derived from remote sensing, terrain analysis, and climate datasets, using spatially referenced soil profile observations as training data \citep{mcbratney2003digital}. The SCORPAN framework---which postulates that soil properties (S) are functions of soil (S), climate (C), organisms (O), relief (R), parent material (P), age (A), and spatial position (N)---provides the conceptual basis for covariate selection in DSM. RF and gradient boosting models have dominated recent DSM benchmarking exercises, though deep learning models incorporating spatial context through CNN or graph neural network (GNN) architectures are increasingly competitive, particularly for mapping structurally complex properties such as soil carbon and texture at high resolution.
-
-\subsubsection{Pedotransfer Functions and Estimation of Soil Hydraulic Parameters}
-
-The estimation of hydraulic parameters (saturated hydraulic conductivity $K_s$, water retention curve parameters $\alpha$, $n$, $\theta_r$, $\theta_s$) from more easily measured soil characteristics such as texture, bulk density, and organic matter is the domain of pedotransfer functions (PTFs). Traditional PTFs are regression-based equations fitted to relatively small, geographically limited soil datasets.
-
-A general linear pedotransfer function may be expressed as:
-
-\begin{equation}
-Y
-=
-\beta_0
-+
-\sum_{i=1}^{p}
-\beta_i X_i
-+
-\varepsilon,
-\end{equation}
-
-where $Y$ denotes the predicted hydraulic parameter, $X_i$ are soil predictor variables (e.g., clay content, bulk density, organic carbon), $\beta_i$ are regression coefficients, and $\varepsilon$ is the residual error.
-
-The van Genuchten soil water retention model, commonly parameterised using PTFs, is given by:
-
-\begin{equation}
-\theta(h)
-=
-\theta_r
-+
-\frac{
-\theta_s-\theta_r
-}{
-\left[
-1+(\alpha |h|)^n
-\right]^m
-},
-\end{equation}
-
-where $\theta(h)$ is the volumetric water content at matric potential $h$, $\theta_r$ and $\theta_s$ are the residual and saturated water contents, respectively, $\alpha$ and $n$ are empirical shape parameters, and
-
-\begin{equation}
-m = 1 - \frac{1}{n}.
-\end{equation}
-
-Saturated hydraulic conductivity is often modelled empirically as:
-
-\begin{equation}
-K_s
-=
-f(\text{sand},\text{clay},\rho_b,\text{OM}),
-\end{equation}
-
-where $\rho_b$ is bulk density and OM denotes organic matter content.
-
-Deep learning PTFs trained on large, globally compiled databases (e.g., the UNSODA, HYDRUSbase, and WRB datasets) have substantially outperformed traditional regression PTFs in independent validation studies, particularly for soils with extreme textural compositions or unusual structural properties \citep{zhang2018deep}.
-
-\subsubsection{Crop Yield Prediction and Precision Agriculture}
-
-AI-based crop yield prediction models integrate soil moisture, weather, satellite-derived vegetation indices (NDVI, EVI, LAI), and agronomic management data to generate spatially explicit yield estimates before or during the growing season \citep{you2017deep}. CNN-LSTM hybrid models, which simultaneously capture the spatial pattern of remotely sensed crop reflectance and its temporal evolution through the season, have achieved county-level maize and soybean yield prediction accuracies comparable to those of official agronomic surveys in the United States, months ahead of harvest. Such early-season yield forecasts are of substantial value to agricultural commodity markets, food security assessments, and supply chain planning.
-
-\subsection{Climate Change Adaptation Through AI}
-
-The capacity of AI models to assimilate heterogeneous environmental datasets and to generalise across diverse climatic conditions positions them as important tools for agricultural climate change adaptation. ML models have been used to project the impacts of climate change scenarios on soil moisture deficits, irrigation water demand, drought frequency, and crop yield under Representative Concentration Pathways (RCPs) and Shared Socioeconomic Pathways (SSPs) from CMIP6 climate model ensembles \citep{trnka2022soil}. By emulating the complex interactions between changing precipitation, temperature, and evapotranspiration demand and their effects on soil--water availability, AI surrogates enable rapid screening of adaptation strategies (drought-tolerant crop varieties, deficit irrigation, soil carbon sequestration) across ensembles of climate scenarios that would be computationally prohibitive to evaluate with physically-based crop--water models.
-
-Transfer learning techniques, which adapt AI models pretrained on historical data to future climate conditions by retraining on synthetic datasets generated from climate model outputs, offer a promising approach for extending the temporal validity of data-driven agricultural models beyond the range of historical observations. Physics-guided deep learning, which incorporates thermodynamic constraints on evapotranspiration and water balance closure as soft or hard constraints in the model loss function, provides additional safeguards against physically implausible predictions under novel climatic conditions \citep{willard2022integrating}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTION 4: DATA SOURCES FOR AI-BASED
@@ -1360,7 +1281,7 @@ In irrigation scheduling applications, SHAP-based attribution has been used to i
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_08.png}
     \end{center}
-    \caption{Explainable AI framework for agricultural decision support. Diagram source: author.}
+    \caption{Explainable AI framework for agricultural decision support. \textcolor{blue}{Software used: Inkscape, v. 1.4.4 for plotting data dashboard and clipart; draw.io for plotting taxonomy flowchart; GIMP v. 3.2.4 for plotting farm scene; PlotNeuralNet, NetworkX and Matplotlib for plotting DL architecture diagram. Noun Project for plotting conceptual OS architecture. Diagram} source: author.}
     \label{fig08}
 \end{figure}
 
@@ -1490,7 +1411,7 @@ Future smart farming systems will likely comprise hierarchical edge-fog-cloud AI
     \begin{center}
 	\hspace{0pt}\includegraphics[width=14.0cm]{Figure_09.png}
     \end{center}
-    \caption{Future ecosystem of AI-enabled sustainable agriculture. Diagram source: author.}
+    \caption{Future ecosystem of AI-enabled sustainable agriculture. \textcolor{blue}{Software: Midjourney v. 6.1 for infographic illustration of farm scenes; Inkscape, v. 1.4.4 for figure composition and layout}. Diagram source: author.}
     \label{fig09}
 \end{figure}
 
